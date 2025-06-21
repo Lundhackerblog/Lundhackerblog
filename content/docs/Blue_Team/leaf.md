@@ -1,6 +1,7 @@
 ---
 title: Leaf Page
-prev: ../
+type: docs
+prev: docs/Blue_Team/
 ---
 
 Esta es una página hoja (leaf) dentro de Blue Team.

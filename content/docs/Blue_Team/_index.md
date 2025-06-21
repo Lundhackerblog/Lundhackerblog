@@ -1,5 +1,8 @@
 ---
 title: Blue Team
+type: docs
+prev: docs/first-page
+next: docs/Blue_Team/leaf
 sidebar:
   open: true
 ---

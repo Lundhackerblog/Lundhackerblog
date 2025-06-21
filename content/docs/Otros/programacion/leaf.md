@@ -1,6 +1,7 @@
 ---
 title: Leaf Page
-prev: ../
+type: docs
+prev: docs/Otros/programacion/
 ---
 
 Esta es una página hoja (leaf) dentro de Programación.

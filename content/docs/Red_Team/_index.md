@@ -1,5 +1,8 @@
 ---
 title: Red Team
+type: docs
+prev: docs/first-page
+next: docs/Red_Team/leaf
 sidebar:
   open: true
 ---

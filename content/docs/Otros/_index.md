@@ -1,5 +1,8 @@
 ---
 title: Otros
+type: docs
+prev: docs/first-page
+next: docs/Otros/leaf
 sidebar:
   open: true
 ---

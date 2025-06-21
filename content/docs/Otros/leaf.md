@@ -1,6 +1,7 @@
 ---
 title: Leaf Page
-prev: ../
+type: docs
+prev: docs/Otros/
 ---
 
 Esta es una página hoja (leaf) dentro de Otros.

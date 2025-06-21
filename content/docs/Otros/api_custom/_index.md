@@ -1,5 +1,8 @@
 ---
 title: API Custom
+type: docs
+prev: docs/Otros/_index.md
+next: docs/Otros/api_custom/leaf
 sidebar:
   open: true
 ---
