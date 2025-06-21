@@ -1,5 +1,5 @@
 # Hugo configuration file
-title: My Site
+title: Blog Lund
 
 # import hextra as module
 module:
@@ -56,3 +56,5 @@ params:
   editURL:
     enable: true
     base: "https://github.com/Lundhackerblog/Lundhackerblog.github.io/tree/main/content"
+
+logo: /static/logo.svg
