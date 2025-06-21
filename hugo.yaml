@@ -58,3 +58,5 @@ params:
     base: "https://github.com/Lundhackerblog/Lundhackerblog.github.io/tree/main/content"
 
 logo: /static/logo.svg
+
+enableInlineShortcodes: true
