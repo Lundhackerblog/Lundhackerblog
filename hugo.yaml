@@ -33,7 +33,7 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/Lundhackerblog/Lundhackerblog.github.io"
+      url: "https://github.com/Lundhackerblog"
       params:
         icon: github
     - name: Twitter
