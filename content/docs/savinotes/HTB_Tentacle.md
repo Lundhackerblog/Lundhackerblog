@@ -168,7 +168,7 @@ pero de manera local para poder scanear el **Internal Squid Proxy**.
 
 
 
-```{r, echo = FALSE, fig.cap="isp proxychains", out.width="90%"}
+![isp proxychains](images/Tentacle-otherserv-proxychains-conf.png){ style="width:90%"}
     knitr::include_graphics("images/Tentacle-isp-proxychains-conf.png")
 
 ![Tetacle-is-roxychais-cof](/assets/images/Tentacle-isp-proxychains-conf.png) 
@@ -202,9 +202,7 @@ Como no vemos nigun puerto interesante vamos a intentar con la misma tecnica sca
 ```
 
 
-```{r, echo = FALSE, fig.cap="internal servers scanning", out.width="90%"}
-    knitr::include_graphics("images/Tentacle-otherserv-proxychains-conf.png")
-```
+```{r, echo = FALSE, fig.cap="internal servers scanning", out.width="90%;" }
 
 ```bash
 ![Tetacle-otherserv-roxychais-cof](/assets/images/Tentacle-otherserv-proxychains-conf.png) 
@@ -233,9 +231,7 @@ Si lanzamos el commando
 ```
  podemos ver lo siguiente.
 
-```{r, echo = FALSE, fig.cap="Proxychains chain", out.width="90%"}
-    knitr::include_graphics("images/Tentacle-proxychains-chain.png")
-```
+![Proxychains chain](images/Tentacle-proxychains-chain.png){ style="width:90%;" }
 
 Aqui podemos ver que el puerto esta abierto pero lo mas interesante es el *Strict chain* y vemos que pasamos por la 
 10.10.10.224:3128 hacia el 127.0.0.1:3128 de esta misma maquina para despues pasar por la 10.197.243.77:3128 que es el 
@@ -263,9 +259,7 @@ proxychains -q curl -s http://wpad.realcorp.htb/wpad.dat | batcat -l js
 
 y si, existe y podemos ver lo siguiente
 
-```{r, echo = FALSE, fig.cap="wpad.dat", out.width="90%"}
-    knitr::include_graphics("images/Tentacle-wpad-dat.png")
-```
+![wpad.dat](images/Tentacle-wpad-dat.png){ style="width:90%;" }
 
 Aqui vemos un nuevo rango de ip 
 ```bash

@@ -545,9 +545,7 @@ El winpeas.exe nos reporta que el usuario Hector tiene fullControl sobre bastant
 reg query "HKLM\system\currentcontrolset\services\seclogon"
 ```
 
-```{r, echo = FALSE, fig.cap="service seclogon reg-expand-sz", out.width="90%"}
-    knitr::include_graphics("images/Control-reg_expand_sz.png")
-```
+![service seclogon reg-expand-sz](images/Control-reg_expand_sz.png){ style="width:90%;" }
 
 ```bash
 ![Cotrol-re_exad_sz](/assets/images/Control-reg_expand_sz.png) 

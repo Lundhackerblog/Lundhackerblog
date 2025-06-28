@@ -172,7 +172,7 @@ Creamos una rama al proyecto y le ponemos nuestro codigo malicioso copiada del g
 
 Si navigamos en la web podemos ver multiples repositorios.
 
-```{r, echo = FALSE, fig.cap="Azure DevOps repositories", out.width="90%"}
+![Azure DevOps repositories](images/Worker-grupos-agentes.png){ style="width:90%"}
     knitr::include_graphics("images/Worker-repos.png")
 los repositorios corresponden a proyectos relacionados con subdominios. Si añadimos el subdominio 
 ```bash
@@ -739,9 +739,7 @@ grupo permite enviar commandos como **nt authority system**.
 
 1. Checkeamos el agente a utilizar
 
-    ```{r, echo = FALSE, fig.cap="Azure DevOps agente Setup", out.width="80%"}
-    knitr::include_graphics("images/Worker-grupos-agentes.png")
-    ```
+    ```{r, echo = FALSE, fig.cap="Azure DevOps agente Setup", out.width="80%;" }
 
     knitr::include_graphics("images/Worker-nueva-canalizacion.png")
 ![Worker-ruos-aetes](/assets/images/Worker-grupos-agentes.png) 
@@ -754,14 +752,12 @@ grupo permite enviar commandos como **nt authority system**.
 1. Seleccionamos el proyecto existente
 1. Configuramos la canalizacion con Canalizacion inicial
 
-    ```{r, echo = FALSE, fig.cap="Azure DevOps canalizacion inicial", out.width="80%"}
+    ![Azure DevOps canalizacion inicial](images/Worker-whoami-pipeline.png){ style="width:80%"}
 
 ![Worker-azur-reo](/assets/images/Worker-azur-repo.png) 
 1. Creamos el script pipeline para hacer un whoami
 
-    ```{r, echo = FALSE, fig.cap="Azure DevOps pipeline whoami", out.width="80%"}
-    knitr::include_graphics("images/Worker-whoami-pipeline.png")
-    ```
+    ```{r, echo = FALSE, fig.cap="Azure DevOps pipeline whoami", out.width="80%;" }
     ```{r, echo = FALSE, fig.cap="Azure DevOps guardar pipeline", out.width="80%"}
 ![Worker-Caalizacio-iicial](/assets/images/Worker-Canalizacion-inicial.png) 
     knitr::include_graphics("images/Worker-guardar-ejecutar.png")

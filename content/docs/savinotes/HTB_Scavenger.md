@@ -127,7 +127,7 @@ Los añadimos al
 ```
 
 
-```{r, echo = FALSE, fig.cap="hosts despues del domain transfer attack", out.width="90%"}
+![hosts despues del domain transfer attack](images/scavenger-hosts3.png){ style="width:90%"}
     knitr::include_graphics("images/scavenger-hosts2.png")
 
 ![scaveer-hosts2](/assets/images/scavenger-hosts2.png) 
@@ -282,9 +282,7 @@ Ya podemos añadir estos dominios en el
 ```
 .
 
-```{r, echo = FALSE, fig.cap="hosts despues del sqli", out.width="90%"}
-    knitr::include_graphics("images/scavenger-hosts3.png")
-```
+```{r, echo = FALSE, fig.cap="hosts despues del sqli", out.width="90%;" }
 
 ### Ataque de transferencia de zona Part 2 {-}
 ![scaveer-hosts3](/assets/images/scavenger-hosts3.png) 
@@ -521,9 +519,7 @@ sym.root_write
 pdf
 ```
 
-```{r, echo = FALSE, fig.cap="radare2 root.ko", out.width="90%"}
-    knitr::include_graphics("images/radare2rootko.png")
-```
+![radare2 root.ko](images/radare2rootko.png){ style="width:90%;" }
 
 Vemos esta parte interesante y probamos una vez mas con:
 

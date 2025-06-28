@@ -291,7 +291,7 @@ Lo comprobamos de la siguiente manera.
 
     - lo buscamos en el listing de ghidra
 
-        ```{r, echo = FALSE, fig.cap="system function listing breakpoint", out.width="90%"}
+        ![system function listing breakpoint](images/Safe-test-fct-inspection.png){ style="width:90%"}
             knitr::include_graphics("images/Safe-system-breakpoint.png")
 
 ![Safe-system-breakoit](/assets/images/Safe-system-breakpoint.png) 
@@ -343,9 +343,7 @@ podemos tomar el control de este registro para poner el comando que queremos.
 Para hacer este truco, el Tito nos recomiendo en primer lugar inspeccionar el resto de funcciones existentes. Si lo miramos con **Ghidra** en el Symbol Tree,
 vemos que hay una funccion que se llama test y que contiene las ejecuciones siguientes:
 
-```{r, echo = FALSE, fig.cap="test function inspection", out.width="90%"}
-    knitr::include_graphics("images/Safe-test-fct-inspection.png")
-```
+```{r, echo = FALSE, fig.cap="test function inspection", out.width="90%;" }
 
 programa como nosotros queremos.
 ![Safe-test-fct-isectio](/assets/images/Safe-test-fct-inspection.png) 
@@ -375,9 +373,7 @@ Para hacer este truco, tenemos que pasar por Gadgets que seria un ropper en este
 gef➤  ropper --search "pop r13"
 ```
 
-```{r, echo = FALSE, fig.cap="gef search for gadgets", out.width="90%"}
-    knitr::include_graphics("images/Safe-gadget-r13.png")
-```
+![gef search for gadgets](images/Safe-gadget-r13.png){ style="width:90%;" }
 
 Aqui vemos que tenemos un Gadget 
 ```bash

@@ -158,16 +158,14 @@ es exactamente la misma, solo la IP y la url de las imagenes cambian.
 ![otebook-sier-cofi](/assets/images/notebook-sniper-config.png) 
 1. Cargamos el diccionario creado a la payload list y le quitamos el Payload encoding
 
-    ```{r, echo = FALSE, fig.cap="nineveh sniper payload list", out.width="90%"}
+    ![nineveh sniper payload list](images/notebook-fetch-response.png){ style="width:90%"}
     knitr::include_graphics("images/notebook-sniper-list.png")
 
 ![otebook-sier-list](/assets/images/notebook-sniper-list.png) 
     - en Grep - Extract damos a ADD
     - le damos a Fetch response y seleccionamos el campo invalid password
 
-        ```{r, echo = FALSE, fig.cap="nineveh sniper fetch response", out.width="90%"}
-        knitr::include_graphics("images/notebook-fetch-response.png")
-        ```
+        ```{r, echo = FALSE, fig.cap="nineveh sniper fetch response", out.width="90%;" }
 
 lo dejamos un ratito y ya podemos ver que filtrando por esta columna vemos una linea donde no esta escrito esto. Ya tenemos la contraseña.
 ![otebook-fetch-resose](/assets/images/notebook-fetch-response.png) 
@@ -456,9 +454,7 @@ crear una base de datos con una extension php y insertar PHP code para posterior
 
 1. Creamos una base de datos llamada hack.php
 
-    ```{r, echo = FALSE, fig.cap="create hack.php database", out.width="90%"}
-    knitr::include_graphics("images/phpliteadmin-hack-php.png")
-    ```
+    ![create hack.php database](images/phpliteadmin-hack-php.png){ style="width:90%;" }
 
     Si pinchamos el link de la hack.php database vemos que a sido creado en 
 ```bash

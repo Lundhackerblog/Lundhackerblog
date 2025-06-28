@@ -1,36 +1,34 @@
 import os
 import re
 
-def generar_front_matter(nombre_archivo):
-    titulo = os.path.splitext(nombre_archivo)[0]  # Quita extensión .md
-    return f"""---
-title: {titulo}
-type: docs
-prev: docs/savinotes/
----"""
+# Ruta base (puedes cambiarla si quieres apuntar a otra carpeta)
+BASE_DIR = "."
 
-def reemplazar_front_matter(contenido, nuevo_front):
-    pattern = re.compile(r'^---\s*$(.*?)^---\s*$', re.DOTALL | re.MULTILINE)
-    if pattern.search(contenido):
-        return pattern.sub(nuevo_front, contenido)
-    else:
-        return nuevo_front + "\n\n" + contenido  # Si no tenía front-matter, se añade
+# Expresión regular para capturar bloques RMarkdown + include_graphics
+BLOCK_REGEX = re.compile(
+    r'```{r,.*?fig\.cap="(.*?)",.*?out\.width="(.*?)"}\s+knitr::include_graphics\("([^"]+)"\)\s+```',
+    re.DOTALL
+)
 
-def procesar_directorio(ruta_base):
-    for root, _, files in os.walk(ruta_base):
-        for archivo in files:
-            if archivo.endswith('.md'):
-                ruta = os.path.join(root, archivo)
-                with open(ruta, 'r', encoding='utf-8') as f:
-                    contenido = f.read()
+def process_file(path):
+    with open(path, 'r', encoding='utf-8') as f:
+        content = f.read()
 
-                nuevo_front = generar_front_matter(archivo)
-                nuevo_contenido = reemplazar_front_matter(contenido, nuevo_front)
+    new_content, count = BLOCK_REGEX.subn(
+        lambda m: f'![{m.group(1)}]({m.group(3)}){{ style="width:{m.group(2)};" }}',
+        content
+    )
 
-                if nuevo_contenido != contenido:
-                    with open(ruta, 'w', encoding='utf-8') as f:
-                        f.write(nuevo_contenido)
-                    print(f'Actualizado: {ruta}')
+    if count > 0:
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        print(f"✔ Reemplazado {count} bloque(s) en: {path}")
 
-if __name__ == '__main__':
-    procesar_directorio('.')  # Cambia '.' por la ruta de tu carpeta si es necesario
+def walk_and_process(base_dir):
+    for root, dirs, files in os.walk(base_dir):
+        for file in files:
+            if file.endswith(".md"):
+                process_file(os.path.join(root, file))
+
+if __name__ == "__main__":
+    walk_and_process(BASE_DIR)

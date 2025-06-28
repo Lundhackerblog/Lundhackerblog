@@ -151,13 +151,11 @@ por un proxy, vamos a utilizar **Burp** para conectar el fuzzer con el proxy.
 
     - En la pagina **User options** de Burp, creamos un proxy server
 
-        ```{r, echo = FALSE, fig.cap="BurpSuite: create proxy server", out.width="90%"}
+        ![BurpSuite: create proxy server](images/burp-add-port-80-1.png){ style="width:90%"}
             knitr::include_graphics("images/burp-create-proxy-server.png")
 
 ![bur-create-roxy-server](/assets/images/burp-create-proxy-server.png) 
-    ```{r, echo = FALSE, fig.cap="BurpSuite: create proxy server 1", out.width="90%"}
-        knitr::include_graphics("images/burp-add-port-80-1.png")
-    ```
+    ```{r, echo = FALSE, fig.cap="BurpSuite: create proxy server 1", out.width="90%;" }
 
 
 ![bur-add-ort-80-1](/assets/images/burp-add-port-80-1.png) 

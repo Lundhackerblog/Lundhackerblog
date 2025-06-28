@@ -130,16 +130,14 @@ Aqui encontramos dos ficheros
 ![otebook-sier-cofi](/assets/images/notebook-sniper-config.png) 
 1. Cargamos el diccionario creado a la payload list y le quitamos el Payload encoding
 
-    ```{r, echo = FALSE, fig.cap="notebook sniper payload list", out.width="90%"}
+    ![notebook sniper payload list](images/notebook-fetch-response.png){ style="width:90%"}
     knitr::include_graphics("images/notebook-sniper-list.png")
 
 ![otebook-sier-list](/assets/images/notebook-sniper-list.png) 
     - en Grep - Extract damos a ADD
     - le damos a Fetch response
 
-        ```{r, echo = FALSE, fig.cap="notebook sniper fetch response", out.width="90%"}
-        knitr::include_graphics("images/notebook-fetch-response.png")
-        ```
+        ```{r, echo = FALSE, fig.cap="notebook sniper fetch response", out.width="90%;" }
 
 
 ![otebook-fetch-resose](/assets/images/notebook-fetch-response.png) 
@@ -170,9 +168,7 @@ la url donde encuentra esta Key por una creado por nosotros.
     ```
 1. Introducimos la key en la web de JWT.io
 
-    ```{r, echo = FALSE, fig.cap="jwt hijacking", out.width="90%"}
-    knitr::include_graphics("images/jwt-hijacking.png")
-    ```
+    ![jwt hijacking](images/jwt-hijacking.png){ style="width:90%;" }
 
 1. Nos entablamos un servidor web para que pueda cojer la key
 
@@ -180,9 +176,7 @@ la url donde encuentra esta Key por una creado por nosotros.
 ![jwt-hijacki](/assets/images/jwt-hijacking.png) 
 1. Copiamos el JWT token en firefox
 
-    ```{r, echo = FALSE, fig.cap="jwt firefox hijack", out.width="90%"}
-    knitr::include_graphics("images/jwt-firefox.png")
-    ```
+    ![jwt firefox hijack](images/jwt-firefox.png){ style="width:90%;" }
 
 Ya lanzando la web otra vez y vemos que un Admin Panel a salido y en el cual se puede ver notas y uploadear ficheros.
 

@@ -261,7 +261,7 @@ Aqui vemos que el exploit nos da directamente une reverse shell.
 
 1. Modificamos el script para que ataque el servicio de la maquina victima
 
-    ```{r, echo = FALSE, fig.cap="voting system reverse shell", out.width="90%"}
+    ![voting system reverse shell](images/love-hklm-hkcu.png){ style="width:90%"}
     knitr::include_graphics("images/love-votingsystem-rshell.png")
 
 ![love-votisystem-rshell](/assets/images/love-votingsystem-rshell.png) 
@@ -327,9 +327,7 @@ winPEAS.exe
 
 Vemos algo interressante en Checking AlwaysInstallElevated
 
-```{r, echo = FALSE, fig.cap="privesc hklm hkcu vuln", out.width="90%"}
-knitr::include_graphics("images/love-hklm-hkcu.png")
-```
+```{r, echo = FALSE, fig.cap="privesc hklm hkcu vuln", out.width="90%;" }
 
 
 ![love-hklm-hkcu](/assets/images/love-hklm-hkcu.png) 

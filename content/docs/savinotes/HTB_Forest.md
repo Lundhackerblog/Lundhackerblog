@@ -262,7 +262,7 @@ Effectivamente podemos crear usuarios.
 Si seguimos analysando el BloodHound vemos que el grupo exchange Windows permission tiene capacidad de typo WriteDacl sobre el dominio.
 Si hacemos un click derecho sobre el **WriteDacl** podemos mirar mas informaciones
 
-```{r, echo = FALSE, fig.cap="Bloodhound abuse WriteDacl", out.width="90%"}
+![Bloodhound abuse WriteDacl](images/Forest-dcsync-admin-hash.png){ style="width:90%"}
     knitr::include_graphics("images/Forest-Abuse_writedacl.png")
 
 ![Forest-Abuse_writedacl](/assets/images/Forest-Abuse_writedacl.png) 
@@ -303,9 +303,7 @@ Si hacemos un click derecho sobre el **WriteDacl** podemos mirar mas informacion
 
 Ya tenemos el hash del usuario administrador
 
-```{r, echo = FALSE, fig.cap="DCSync Admin hash", out.width="90%"}
-    knitr::include_graphics("images/Forest-dcsync-admin-hash.png")
-```
+```{r, echo = FALSE, fig.cap="DCSync Admin hash", out.width="90%;" }
 
 evil-winrm -i 10.10.10.161 -u 'Administrator' -H '32693b11e6aa90eb43d3372a07ceea6'
 ![Forest-dcsyc-admi-hash](/assets/images/Forest-dcsync-admin-hash.png) 

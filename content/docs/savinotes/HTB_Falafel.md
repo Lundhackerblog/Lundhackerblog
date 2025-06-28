@@ -201,7 +201,7 @@ un script en python que es mucho mas agil.
 ```
 
 
-    ```{r, echo = FALSE, fig.cap="Burp Cluster Bomb config", out.width="90%"}
+    ![Burp Cluster Bomb config](images/Falafel-ClusterBomb-config-payload1.png){ style="width:90%"}
         knitr::include_graphics("images/Falafel-ClusterBomb-config-payload.png")
    
 ![Falafel-ClusterBomb-cofi-ayload](/assets/images/Falafel-ClusterBomb-config-payload.png) 
@@ -209,9 +209,7 @@ un script en python que es mucho mas agil.
     - cambiamos el Number range en sequential From 1 To 5 con step de 1
     - sacamos el URL encode del final de la pagina
 
-    ```{r, echo = FALSE, fig.cap="Burp Cluster Bomb config set 1", out.width="90%"}
-    knitr::include_graphics("images/Falafel-ClusterBomb-config-payload1.png")
-    ```
+    ```{r, echo = FALSE, fig.cap="Burp Cluster Bomb config set 1", out.width="90%;" }
 
     - cambiamos el Character set a 
 ```bash
@@ -221,13 +219,11 @@ un script en python que es mucho mas agil.
 ![Falafel-ClusterBomb-cofi-ayload1](/assets/images/Falafel-ClusterBomb-config-payload1.png) 
     - sacamos el URL encode del final de la pagina
 
-    ```{r, echo = FALSE, fig.cap="Burp Cluster Bomb config set 2", out.width="90%"}
-    knitr::include_graphics("images/Falafel-ClusterBomb-config-payload2.png")
-    ```
+    ![Burp Cluster Bomb config set 2](images/Falafel-ClusterBomb-config-payload2.png){ style="width:90%;" }
 
 1. En el nodo Options En el Grep - Match
 
-    ```{r, echo = FALSE, fig.cap="Burp Cluster Bomb config matcher", out.width="90%"}
+    ![Burp Cluster Bomb config matcher](images/Falafel-open-capture.png){ style="width:90%"}
 ![Falafel-ClusterBomb-cofi-ayload2](/assets/images/Falafel-ClusterBomb-config-payload2.png) 
     knitr::include_graphics("images/Falafel-ClusterBomb-config-matcher.png")
     ```
@@ -619,9 +615,7 @@ Aqui vemos que el fichero
     - Aun que la apertura del fichero a fallado le damos al menu Archivo > Abrir 
     - Seleccionamos el typo de archivo Datos de imagen en bruto
 
-        ```{r, echo = FALSE, fig.cap="Gimp - Archive brute data", out.width="90%"}
-        knitr::include_graphics("images/Falafel-open-capture.png")
-        ```
+        ```{r, echo = FALSE, fig.cap="Gimp - Archive brute data", out.width="90%;" }
 
     - Entramos la proporciones de la virtual_size
 
