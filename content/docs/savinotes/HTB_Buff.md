@@ -343,8 +343,10 @@ En la maquina windows, arrancamos otra vez el servicio CloudMe y nos abrimos el 
 
 Pinchamos en el menu File del Immunity Debugger a attach y seleccionamos el servicio CloudMe
 
-```{r, echo = FALSE, fig.cap="BufferOverflow Attach service", out.width="90%"}
+```bash
+{r, echo = FALSE, fig.cap="BufferOverflow Attach service", out.width="90%"}
     knitr::include_graphics("images/Buff-ID_attach.png")
+```
 
 ![Buff-ID_attach](/assets/images/Buff-ID_attach.png) 
 Desde la maquina victima lanzamos otra vez el exploit para ver lo que pasa.

@@ -139,8 +139,10 @@ Los dos ficheros que tenemos que tocar para configurar la VPN son:
 
 Si buscamos por internet como se configura el fichero ipsec.secrets y encontramos algo el la web [systutorials](https://www.systutorials.com/docs/linux/man/5-ipsec.secrets)
 
-```{r, echo = FALSE, fig.cap="info ipsec.secrets", out.width="90%"}
+```bash
+{r, echo = FALSE, fig.cap="info ipsec.secrets", out.width="90%"}
     knitr::include_graphics("images/Conceal-ipsec-secrets-web.png")
+```
 
 ![Coceal-isec-secrets-web](/assets/images/Conceal-ipsec-secrets-web.png) 
 ```bash
