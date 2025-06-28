@@ -1,8 +1,9 @@
 ---
-title: PROFILE
+title: Profile
 type: docs
 prev: /
 next: docs/folder/
+weight: 1
 ---
 
 ## Sobre mí

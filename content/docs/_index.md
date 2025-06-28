@@ -1,6 +1,7 @@
 ---
 title: Blog Hack
 next: first-page
+weight: 3
 ---
 ## Presentación / Introduction
 

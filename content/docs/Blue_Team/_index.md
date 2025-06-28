@@ -3,7 +3,7 @@ title: Blue Team
 type: docs
 prev: docs/first-page
 next: docs/Blue_Team/leaf
-weight: 1
+weight: 4
 sidebar:
   open: true
 ---

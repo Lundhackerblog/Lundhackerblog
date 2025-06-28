@@ -3,8 +3,6 @@ title: Blog Lund
 toc: false
 ---
 
-This is the landing page.
-
 ## Explore
 
 {{< cards >}}
