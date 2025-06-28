@@ -1,18 +1,26 @@
 ---
-title: Documentation
+title: Blog Hack
 next: first-page
 ---
+## Presentación / Introduction
 
-This is a demo of the theme's documentation layout.
+**ES:**  
+Bienvenido a este blog, un espacio donde se recopilan numerosos _cheat sheets_, apuntes y tutoriales sobre diversas áreas, principalmente ciberseguridad, DevOps y programación. Aquí encontrarás recursos útiles y prácticos para aprender y mejorar tus habilidades técnicas.
 
-## Hello, World!
+**EN:**  
+Welcome to this blog, a place where you will find a collection of cheat sheets, notes, and tutorials covering various topics, mainly cybersecurity, DevOps, and programming. Here you will discover useful and practical resources to help you learn and enhance your technical skills
+---
 
-```go {filename="main.go"}
-package main
+### 🚀 Temas principales / Main Topics
 
-import "fmt"
+{{< filetree/container >}}
+  {{< filetree/file name="Ciberseguridad / Cybersecurity 🛡️" >}}
+  {{< filetree/file name="DevOps ⚙️" >}}
+  {{< filetree/file name="Programación / Programming 💻" >}}
+{{< /filetree/container >}}
+---
 
-func main() {
-    fmt.Println("Hello, World!")
-}
-```
+> 📚 **Explora, aprende y comparte.**  
+> **Explore, learn, and share.**
+
+---
