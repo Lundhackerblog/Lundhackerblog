@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Control
-date: 2023/07/10
-slug: HTB_Control
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Control {-}
 
 ## Introduccion {-}

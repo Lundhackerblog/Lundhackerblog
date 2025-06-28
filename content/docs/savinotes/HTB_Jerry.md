@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Jerry
-date: 2023/07/10
-slug: HTB_Jerry
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Jerry {-}
 
 ## Introduccion {-}

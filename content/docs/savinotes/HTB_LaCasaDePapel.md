@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_LaCasaDePapel
-date: 2023/07/10
-slug: HTB_LaCasaDePapel
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # La Casa de Papel {-}
 
 ## Introduccion {-}

@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Jarvis
-date: 2023/07/10
-slug: HTB_Jarvis
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Jarvis {-}
 
 ## Introduccion {-}

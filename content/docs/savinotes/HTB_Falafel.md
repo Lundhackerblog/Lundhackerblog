@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Falafel
-date: 2023/07/10
-slug: HTB_Falafel
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Falafel {-}
 
 ## Introduccion {-}

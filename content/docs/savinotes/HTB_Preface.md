@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Preface
-date: 2023/07/10
-slug: HTB_Preface
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Preface {-}
 
 ## Introducción {-}

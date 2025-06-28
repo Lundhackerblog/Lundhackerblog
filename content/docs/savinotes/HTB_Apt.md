@@ -1,11 +1,8 @@
 ---
-layout: ../layouts/SavinoteLayout.astro
-title: "HTB_Apt"
-date: 2023-07-10
-slug: HTB_Apt
-heroImage: /assets/machines.jpg
+title: HTB_Apt
+type: docs
+prev: docs/savinotes/
 ---
-
 # APT {-}
 
 ## Introduccion {-}

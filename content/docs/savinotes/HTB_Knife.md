@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Knife
-date: 2023/07/10
-slug: HTB_Knife
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Knife {-}
 
 ## Introduccion {-}

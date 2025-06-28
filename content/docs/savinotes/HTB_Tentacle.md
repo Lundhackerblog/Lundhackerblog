@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Tentacle
-date: 2023/07/10
-slug: HTB_Tentacle
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Tentacle {-}
 
 ## Introduccion {-}

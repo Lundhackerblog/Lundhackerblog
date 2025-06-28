@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Mango
-date: 2023/07/10
-slug: HTB_Mango
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Mango {-}
 
 ## Introduccion {-}

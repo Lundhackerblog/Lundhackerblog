@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Joker
-date: 2023/07/10
-slug: HTB_Joker
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Joker {-}
 
 ## Introduccion {-}

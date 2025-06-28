@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_DevOops
-date: 2023/07/10
-slug: HTB_DevOops
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # DevOops {-}
 
 ## Introduccion {-}

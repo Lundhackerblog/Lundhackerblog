@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Traverxec
-date: 2023/07/10
-slug: HTB_Traverxec
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Traverxec {-}
 
 ## Introduccion {-}

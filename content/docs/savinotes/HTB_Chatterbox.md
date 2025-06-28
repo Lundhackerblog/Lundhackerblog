@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Chatterbox
-date: 2023/07/10
-slug: HTB_Chatterbox
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Chatterbox {-}
 
 ## Introduccion {-}

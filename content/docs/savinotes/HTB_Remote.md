@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Remote
-date: 2023/07/10
-slug: HTB_Remote
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Remote {-}
 
 ## Introduccion {-}

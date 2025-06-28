@@ -1,11 +1,8 @@
 ---
-layout: post
-title: HTB Olympus
-date: 2023-05-26
-slug: HTB_Olympus
-heroImage: /assets/machines.jpg
+title: HTB_Olympus
+type: docs
+prev: docs/savinotes/
 ---
-
 # Olympus {-}
 
 ## Introduccion {-}

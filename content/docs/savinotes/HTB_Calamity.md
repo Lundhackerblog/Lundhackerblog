@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Calamity
-date: 2023/07/10
-slug: HTB_Calamity
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Calamity {-}
 
 ## Introduccion {-}

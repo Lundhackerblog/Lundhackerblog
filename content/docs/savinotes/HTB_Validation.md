@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Validation
-date: 2023/07/10
-slug: HTB_Validation
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Validation {-}
 
 ## Introduccion {-}

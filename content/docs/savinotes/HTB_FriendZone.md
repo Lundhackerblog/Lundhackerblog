@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_FriendZone
-date: 2023/07/10
-slug: HTB_FriendZone
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # FriendZone {-}
 
 ## Introduccion {-}

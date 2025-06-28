@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Kotarak
-date: 2023/07/10
-slug: HTB_Kotarak
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Kotarak {-}
 
 ## Introduccion {-}

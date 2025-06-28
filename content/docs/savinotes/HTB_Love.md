@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Love
-date: 2023/07/10
-slug: HTB_Love
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Love {-}
 
 ## Introduccion {-}

@@ -1,11 +1,8 @@
 ---
-layout: post
 title: HTB_Hawk
-date: 2023/07/10
-slug: HTB_Hawk
-heroImage: /assets/machines.jpg
+type: docs
+prev: docs/savinotes/
 ---
-
 # Hawk {-}
 
 ## Introduccion {-}
