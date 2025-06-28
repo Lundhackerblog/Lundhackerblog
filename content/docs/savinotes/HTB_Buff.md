@@ -359,13 +359,15 @@ En el Immunity debugger podemos ver que se a vuelto a PAUSEAR y en la ventanita 
 
 ##### Explicacion del stack {-}
 
-```{r, echo = FALSE, fig.cap="BufferOverflow explicacion stack", out.width="90%"}
+```bash
+{r, echo = FALSE, fig.cap="BufferOverflow explicacion stack", out.width="90%"}
     knitr::include_graphics("images/Buff-stack_explanation.png")
 ```
 
 ![Buff-stack_exlaatio](/assets/images/Buff-stack_explanation.png)
 
-```{r, echo = FALSE, fig.cap="BufferOverflow overflow with A", out.width="90%"}
+```bash
+{r, echo = FALSE, fig.cap="BufferOverflow overflow with A", out.width="90%"}
     knitr::include_graphics("images/Buff-As.png")
 ```
 
