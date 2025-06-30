@@ -1,9 +1,8 @@
 ---
-title: Active Directory
+title: Bloodhound
 type: docs
 prev: docs/first-page
 weight: 8
 sidebar:
   open: false
 ---
-FALTA
