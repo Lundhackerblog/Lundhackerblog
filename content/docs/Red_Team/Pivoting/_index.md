@@ -1,5 +1,5 @@
 ---
-title: Pivoting(Red Team)
+title: Pivoting
 type: docs
 prev: docs/first-page
 weight: 8

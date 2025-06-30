@@ -1,5 +1,5 @@
 ---
-title: Linux(Red Team)
+title: Linux
 type: docs
 prev: docs/first-page
 next: docs/Red_Team/leaf

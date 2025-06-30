@@ -1,5 +1,5 @@
 ---
-title: Mobil(Red Team)
+title: Mobil
 type: docs
 prev: docs/first-page
 weight: 8
