@@ -1,5 +1,5 @@
 ---
-title: sudo bruteforce
+title: sudo bruteforce(Tool)
 type: docs
 prev: docs/first-page
 next: docs/Red_Team/leaf

@@ -1,5 +1,5 @@
 ---
-title: IP - PORT SCANNER
+title: IP - PORT SCANNER(Tool)
 type: docs
 prev: docs/first-page
 next: docs/Red_Team/leaf
