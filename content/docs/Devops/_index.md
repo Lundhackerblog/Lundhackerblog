@@ -5,7 +5,7 @@ prev: docs/first-page
 next: docs/Devops/leaf
 weight: 5
 sidebar:
-  open: true
+  open: false
 ---
 
 Esta es la página principal de la carpeta Devops.

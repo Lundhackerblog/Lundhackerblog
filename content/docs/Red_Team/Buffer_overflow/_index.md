@@ -5,7 +5,7 @@ prev: docs/first-page
 next: docs/Red_Team/leaf
 weight: 4
 sidebar:
-  open: true
+  open: false
 ---
 
 POR EL MOMENTO SOLO TENGO CONTENPALDO ESTOS 4 TIPOS

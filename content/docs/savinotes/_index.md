@@ -3,7 +3,7 @@ title: S4vinotes remasterd 2.0
 type: docs
 weight: 10
 sidebar:
-  open: true
+  open: false
 ---
 
 {{< cards >}}

@@ -3,7 +3,7 @@ title: X64 bits
 type: docs
 weight: 8
 sidebar:
-  open: true
+  open: false
 ---
 
 ## apuntes

@@ -4,7 +4,7 @@ type: docs
 prev: docs/first-page
 weight: 8
 sidebar:
-  open: true
+  open: false
 ---
 
 PAGINA:[(Nmap Cheat Sheet)](https://securitytrails.com/blog/nmap-cheat-sheet)

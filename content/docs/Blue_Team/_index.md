@@ -5,7 +5,7 @@ prev: docs/first-page
 next: docs/Blue_Team/leaf
 weight: 4
 sidebar:
-  open: true
+  open: false
 ---
 
 Esta es la página principal de la carpeta Blue Team.

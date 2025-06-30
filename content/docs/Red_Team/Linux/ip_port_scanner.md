@@ -5,7 +5,7 @@ prev: docs/first-page
 next: docs/Red_Team/leaf
 weight: 8
 sidebar:
-  open: true
+  open: false
 ---
 ## IP SCAN
 
