@@ -14,6 +14,6 @@ extraer datos de la url de firebase
 
 [HAKING ANDROID 2 - Twitch](https://www.twitch.tv/s4vitaar/clip/LachrymoseDreamyWasabiHassaanChop-45uhvaBFvSHiErbj)
 
-![[/images/red_team/mobil/20241030221441.png]]
+![](/images/red_team/mobil/20241030221441.png)
 
-![[/images/red_team/mobil/20241030221410.png]]
+![](/images/red_team/mobil/20241030221410.png)

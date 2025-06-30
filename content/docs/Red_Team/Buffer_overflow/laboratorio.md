@@ -40,16 +40,16 @@ Protección:
 ---
 
 aqui el progrma esta bien
-![[/images/red_team/buffer_overflow/20241026033033.png]]
+![](/images/red_team/buffer_overflow/20241026033033.png)
 
 aqui colapsa
-![[/images/red_team/buffer_overflow/20241026033106.png]]
+![](/images/red_team/buffer_overflow/20241026033106.png)
 
 abrimos el gdb :
-![[/images/red_team/buffer_overflow/20241026033151.png]]
+![](/images/red_team/buffer_overflow/20241026033151.png)
 
 revisamos las protecciones que cuenta para saber que se puede hacer
-![[/images/red_team/buffer_overflow/20241026033304.png]]
+![](/images/red_team/buffer_overflow/20241026033304.png)
 
 EXPLICACION CHAT GPT :
 
@@ -73,36 +73,36 @@ EXPLICACION CHAT GPT :
 
 # CREO UN PATRON PARA IDENTIFICAR EL TMAÑO DEL BUFFER - BASURA
 
-![[/images/red_team/buffer_overflow/20241026034444.png]]
+![](/images/red_team/buffer_overflow/20241026034444.png)
 
-![[/images/red_team/buffer_overflow/20241026034536.png]]
+![](/images/red_team/buffer_overflow/20241026034536.png)
 
 validos nuestra teoria
 
-![[/images/red_team/buffer_overflow/20241026034649.png]]
+![](/images/red_team/buffer_overflow/20241026034649.png)
 
 AÑADIMOS 4 B "BBBB" Y 4 C "CCCC"
 
-![[/images/red_team/buffer_overflow/20241026034750.png]]
+![](/images/red_team/buffer_overflow/20241026034750.png)
 
-![[/images/red_team/buffer_overflow/20241026034855.png]]
+![](/images/red_team/buffer_overflow/20241026034855.png)
 
 COMENSAMOS ON EL ATAQUE
 
 DEBIDO A QUE EL NX ESTA DESHABILITADO PODEMOS CARGAR UN SHELLCODE EN EL MISMO BUFFER PARA LUEGO LLAMARLO :
 
 BUSCAMOS EL SHELL CODE  , SE TIENE QUE PROBAR CON VARIOS POR QUE ALGUNOS PUEDEN FUNCIOANR Y OTROS NO :
-![[/images/red_team/buffer_overflow/20241026035831.png]]
-![[/images/red_team/buffer_overflow/20241026035847.png]]
+![](/images/red_team/buffer_overflow/20241026035831.png)
+![](/images/red_team/buffer_overflow/20241026035847.png)
 
 EXPLICAMOS EL ATAQUE:
 lo que se hara sera escribir en el buffer de relleno el shell code como dice el paso 1 , luego cuando se llege al paso 2 este tiene que apuntar a la direccion del desajuste(explicacion mas abajo) como dice el paso 2 y para terminar este interpretara el shell code como instrucciones a bajo nivel como dice el paso 3
 
-![[/images/red_team/buffer_overflow/20241026042352.png]]
+![](/images/red_team/buffer_overflow/20241026042352.png)
 
 Entonces pensando el eso quedaria dela siguiente forma
 
-![[/images/red_team/buffer_overflow/20241026041753.png]]
+![](/images/red_team/buffer_overflow/20241026041753.png)
 
 donde:
 null bytes:  son rellenos que no es nada es vacio
@@ -113,26 +113,27 @@ direccion shell code : lo "IDEAL" seria indicar el comienso del shellcode , pero
 entonces costruimos lo siguiente :
 primero el tamaño cual debe ser :
 
-![[/images/red_team/buffer_overflow/20241026034750.png]]
+![](/images/red_team/buffer_overflow/20241026034750.png)
 EL PATTER NOS DICE QUE  es 508 + 4 bits , que serian 512 para este caso
-![[/images/red_team/buffer_overflow/20241026043712.png]]
+![](/images/red_team/buffer_overflow/20241026043712.png)
 
 sabiendo que es 512 debemos restar el shell code que en este caso es 33 BITS , EN LA MISMA DOCUMENTACION LO DICE
 
 dando como resultado 512 - 33 = 479
 [Linux/x86 - execve(/bin/bash, [/bin/bash, -p], NULL) - 33 bytes](https://shell-storm.org/shellcode/files/shellcode-606.html)
-![[/images/red_team/buffer_overflow/20241026043816.png]]
 
-![[/images/red_team/buffer_overflow/20241026044505.png]]
+![](/images/red_team/buffer_overflow/20241026043816.png)
+
+![](/images/red_team/buffer_overflow/20241026044505.png)
 
 FALTA!!!!
 
-![[/images/red_team/buffer_overflow/20241026050241.png]]
+![](/images/red_team/buffer_overflow/20241026050241.png)
 
-![[/images/red_team/buffer_overflow/20241026050255.png]]
+![](/images/red_team/buffer_overflow/20241026050255.png)
 
-![[/images/red_team/buffer_overflow/20241026050331.png]]
+![](/images/red_team/buffer_overflow/20241026050331.png)
 
 SHELL CODE COMIENZA POR AQUI
 
-![[/images/red_team/buffer_overflow/20241026050216.png]]
+![](/images/red_team/buffer_overflow/20241026050216.png)
