@@ -7,13 +7,16 @@ sidebar:
   open: false
 ---
 
+
+## GENERAL - TEORIA
+
 PRINCIPAL
 [Active Directory Methodology | HackTricks](https://book.hacktricks.xyz/windows-hardening/active-directory-methodology)
 
 **DNS scan - Enumerating Users - Password Bruteforce-Exploring SMB shares**
 [Enumerating AD infrastructure](https://medium.com/@Shorty420/enumerating-ad-98e0821c4c78)
 
-### ACTIVE DIRECTORY ENUMERATION
+## ACTIVE DIRECTORY ENUMERATION
 
 !!!!   ***IMPACKET-SUIT***   !!!!!!
 
@@ -23,7 +26,15 @@ USER - NTLM KERBEROS [Impacket-getTGT | WADComs](https://wadcoms.github.io/wadco
 
 ![imagen error](/images/red_team/windows/20241012185815.png)
 
-## ENUMERACION
+## PARTE 1 - RESPONDER
+
+ENVENEDADOR DE TRAFICO , CAPTURA HASH NTLM Y OTRAS COSAS MAS
+[RESPONDER GitHub]([GitHub - lgandx/Responder: Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2, Extended Security NTLMSSP and Basic HTTP authentication.](https://github.com/lgandx/Responder))
+
+GUIA COMPLETA: [KSEC ARK - Pentesting and redteam knowledge base | Responder - CheatSheet (ivoidwarranties.tech)](https://www.ivoidwarranties.tech/posts/pentesting-tuts/responder/cheatsheet/)
+![imagen error](/images/red_team/windows/20241004112049.png)
+
+## PARTE 2 - ENUMERACION - PRACTICO
 
 ### NMAP
 
@@ -34,7 +45,7 @@ USER - NTLM KERBEROS [Impacket-getTGT | WADComs](https://wadcoms.github.io/wadco
 
 VIDEO EXPLICACION FACIL: [Como Usar SMBMAP y SMBCLIENT  (youtube.com)](https://www.youtube.com/watch?v=oXMA1DMjlS4&ab_channel=ElPing%C3%BCinodeMarioLIVE)
 
-==***GUIA COMPLETA AQUI !!!***==  [SMB Enumeration Checklist](https://0xdf.gitlab.io/2018/12/02/pwk-notes-smb-enumeration-checklist-update1.html)
+***GUIA COMPLETA AQUI !!!***  [SMB Enumeration Checklist](https://0xdf.gitlab.io/2018/12/02/pwk-notes-smb-enumeration-checklist-update1.html)
 ![imagen error](/images/red_team/windows/20241012181733.png)
 
 ![imagen error](/images/red_team/windows/20241012181624.png)
@@ -42,7 +53,7 @@ VIDEO EXPLICACION FACIL: [Como Usar SMBMAP y SMBCLIENT  (youtube.com)](https://w
 
 TOOLS:
 
-##### SIN CREDENCIALES
+#### SIN CREDENCIALES
 
 IMPORTANTE!!! -> NULL SESSION =! USER "" =! GUEST
 
@@ -53,7 +64,7 @@ SMBMAP
 
 PODEMOS EJECUTAR TAMBIEN EL
 
-##### CON CREDENCIALES
+#### CON CREDENCIALES
 
 ![imagen error](/images/red_team/windows/20241012174019.png)
 
@@ -65,40 +76,40 @@ impacket-secretsdump <DOMINIO>/USER:PASSWORD@<IP>
 
 ![imagen error](/images/red_team/windows/20241113215857.png)
 
-## LDAP - 389
+### LDAP - 389
 
 GUIA COMPLETA (CON Y SIN CREDENCIALES) [LDAPDOMAINDUMP GUIA COMPLETA)](https://sniferl4bs.com/2020/02/obteniendo-informaci%C3%B3n-del-dominio-con-ldapdomaindump/)
 ![imagen error](/images/red_team/windows/20241004110005.png)
 
 TOOLS :
 
-##### SIN CREDENCIALES
+#### SIN CREDENCIALES
 
 BUSCAR USUARIOS :
 ![imagen error](/images/red_team/windows/20241012182902.png)
 ![imagen error](/images/red_team/windows/20241012182607.png)
 
-##### CON CREDENCIALES
+#### CON CREDENCIALES
 
-####### LDAPSEARCH
+- LDAPSEARCH
 
-![imagen error](/images/red_team/windows/20241012182423.png)
-[LDAP NULL - GUEST - "" USERS](https://ivanitlearning.wordpress.com/2019/03/24/root-me-ldap-null-bind/)
+  ![imagen error](/images/red_team/windows/20241012182423.png)
+  [LDAP NULL - GUEST - "" USERS](https://ivanitlearning.wordpress.com/2019/03/24/root-me-ldap-null-bind/)
 
-![imagen error](/images/red_team/windows/20241012185026.png)
-![imagen error](/images/red_team/windows/20241012185054.png)
+  ![imagen error](/images/red_team/windows/20241012185026.png)
+  ![imagen error](/images/red_team/windows/20241012185054.png)
 
-####### LDAPDOMAINDUMP
+- LDAPDOMAINDUMP
 
-![imagen error](/images/red_team/windows/20241004110028.png)
+  ![imagen error](/images/red_team/windows/20241004110028.png)
 
-NETEXEC - LDAP : [Authentication | NetExec](https://www.netexec.wiki/ldap-protocol/authentication)
-![imagen error](/images/red_team/windows/20241012183149.png)
+  NETEXEC - LDAP : [Authentication | NetExec](https://www.netexec.wiki/ldap-protocol/authentication)
+  ![imagen error](/images/red_team/windows/20241012183149.png)
 
- [Query LDAP | NetExec](https://www.netexec.wiki/ldap-protocol/query-ldap)
-![imagen error](/images/red_team/windows/20241012183115.png)
+  [Query LDAP | NetExec](https://www.netexec.wiki/ldap-protocol/query-ldap)
+  ![imagen error](/images/red_team/windows/20241012183115.png)
 
-## KERBEROS - 88
+### KERBEROS - 88
 
 GUIA COMPLETA DE PENTESTING KERBEROS:
 [Kerberos (I): ¿Cómo funciona Kerberos? - Teoría | Tarlogic](https://www.tarlogic.com/es/blog/como-funciona-kerberos/)
@@ -115,21 +126,21 @@ WORDLIST NECESARIO - JUGAR CON HEAD -N 10 000 , PARA OBTENER LA CANTIDAD DE USUA
 
 TOOL:
 
-##### SIN CREDENCIALES
+#### SIN CREDENCIALES
 
-###### 1-.PARA OBTENER USUARIOS
+- PARA OBTENER USUARIOS
 
-![imagen error](/images/red_team/windows/20241012190415.png)
+    ![imagen error](/images/red_team/windows/20241012190415.png)
 
-![imagen error](/images/red_team/windows/20241012180227.png)
+    ![imagen error](/images/red_team/windows/20241012180227.png)
 
-![imagen error](/images/red_team/windows/20241012180247.png)
+    ![imagen error](/images/red_team/windows/20241012180247.png)
 
-###### 2-.PARA OBTENER HASHES DE USUARIOS QUE NO REQUIERAN AUTENTICACION
+- PARA OBTENER HASHES DE USUARIOS QUE NO REQUIERAN AUTENTICACION
 
-![imagen error](/images/red_team/windows/20241012180207.png)
+    ![imagen error](/images/red_team/windows/20241012180207.png)
 
-##### CON CREDENCIALES
+#### CON CREDENCIALES
 
 BIBLIA KERBEROS
 [A cheatsheet with commands that can be used to perform kerberos attacks · GitHub](https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a)
@@ -148,26 +159,38 @@ impacket-GetUserSPNs <IP-OR-DC>/USERNAME:PASSWORD -request
 
 OTROS
 
-## RPC - 135
+### RPC - 135
 
 [Active Directory Enumeration: RPCClient - Hacking Articles](https://www.hackingarticles.in/active-directory-enumeration-rpcclient/)
 ![imagen error](/images/red_team/windows/20241012184713.png)
 
-##### SIN CREDENCIALES
+#### SIN CREDENCIALES
 
-##### CON CREDENCIALES
+- falta
 
-## NETBIOS - 139
+#### CON CREDENCIALES
 
-## RDP - 3389-3390
+- falta
+
+### NETBIOS - 139
+
+#### SIN CREDENCIALES
+
+- falta
+
+#### CON CREDENCIALES
+
+- falta
+
+### RDP - 3389-3390
 
 [Password Spraying | NetExec](https://www.netexec.wiki/rdp-protocol/password-spraying)
 ![imagen error](/images/red_team/windows/20241004111214.png)
 
-## RESPONDER
+#### SIN CREDENCIALES
 
-ENVENEDADOR DE TRAFICO , CAPTURA HASH NTLM Y OTRAS COSAS MAS
-[RESPONDER GitHub]([GitHub - lgandx/Responder: Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2, Extended Security NTLMSSP and Basic HTTP authentication.](https://github.com/lgandx/Responder))
+- falta
 
-GUIA COMPLETA: [KSEC ARK - Pentesting and redteam knowledge base | Responder - CheatSheet (ivoidwarranties.tech)](https://www.ivoidwarranties.tech/posts/pentesting-tuts/responder/cheatsheet/)
-![imagen error](/images/red_team/windows/20241004112049.png)
+#### CON CREDENCIALES
+
+- falta
