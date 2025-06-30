@@ -71,7 +71,7 @@ EXPLICACION CHAT GPT :
     - **Descripción**: **RELRO (RELocation Read-Only)** es una protección que hace que las secciones de datos que contienen direcciones de función sean de solo lectura después de que el binario ha sido cargado. **Full RELRO** significa que se utilizan las protecciones completas.
     - **Implicaciones**: Ayuda a proteger contra ataques que intentan modificar la tabla de direcciones de funciones (GOT), aumentando la seguridad del binario.
 
-# CREO UN PATRON PARA IDENTIFICAR EL TMAÑO DEL BUFFER - BASURA
+## CREO UN PATRON PARA IDENTIFICAR EL TMAÑO DEL BUFFER - BASURA
 
 ![](/images/red_team/buffer_overflow/20241026034444.png)
 
