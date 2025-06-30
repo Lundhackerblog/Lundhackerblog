@@ -108,6 +108,6 @@ RESUMEN
   - **RelRO Full** impide sobrescribir punteros GOT directamente, lo cual no afecta la explotación con ROP.
   - La falta de **Canary** y **PIE** facilita la predicción y el uso de gadgets del binario principal.
 
-**Format String Attack**
+- **Format String Attack**
 
-- Definición: Técnica de explotación que utiliza vulnerabilidades en las funciones de formato (como `printf`) para inyectar y ejecutar código malicioso, así como para leer o escribir en áreas de memoria controladas por el atacante.
+  - Definición: Técnica de explotación que utiliza vulnerabilidades en las funciones de formato (como `printf`) para inyectar y ejecutar código malicioso, así como para leer o escribir en áreas de memoria controladas por el atacante.
