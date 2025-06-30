@@ -1,5 +1,5 @@
 ---
-title: Teoria
+title: Laboratorio
 type: docs
 prev: docs/first-page
 next: docs/Red_Team/leaf
