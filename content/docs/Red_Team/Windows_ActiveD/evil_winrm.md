@@ -14,4 +14,4 @@ VIDEO GUIA:
 GUIA1:
 [A Detailed Guide on Evil-Winrm - Hacking Articles](https://www.hackingarticles.in/a-detailed-guide-on-evil-winrm/)
 
-![](/images/red_team/windows/20241004113431.png)
+![imagen error](/images/red_team/windows/20241004113431.png)

@@ -9,8 +9,8 @@ sidebar:
 ---
 ## IP SCAN
 
-![](/images/red_team/linux/20241010130136.png)
+![imagen error](/images/red_team/linux/20241010130136.png)
 
 ## PORT SCAN
 
-![](/images/red_team/linux/20241010131622.png)
+![imagen error](/images/red_team/linux/20241010131622.png)

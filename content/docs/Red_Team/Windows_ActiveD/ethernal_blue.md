@@ -13,4 +13,4 @@ windows10 : [OSCP Journey Part 19.0 (Eternal Blue Windows 10) (youtube.com)](htt
 
 [GitHub - EEsshq/CVE-2017-0144---EtneralBlue-MS17-010-Remote-Code-Execution](https://github.com/EEsshq/CVE-2017-0144---EtneralBlue-MS17-010-Remote-Code-Execution)
 
-![](/images/red_team/windows/20241004112130.png)
+![imagen error](/images/red_team/windows/20241004112130.png)

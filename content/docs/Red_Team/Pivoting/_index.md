@@ -67,33 +67,33 @@ EXAMNE DE SIMULACION !!! 6 HORAS !!!
 TOOLS:
 
 PRIVOTING CONCEPTOS:
-![](/images/red_team/linux/pivontig/20241023135125.png)
+![imagen error](/images/red_team/linux/pivontig/20241023135125.png)
 
-![](/images/red_team/linux/pivontig/20241010190059.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190059.png)
 
-![](/images/red_team/linux/pivontig/20241010190139.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190139.png)
 
-![](/images/red_team/linux/pivontig/20241010190158.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190158.png)
 
-![](/images/red_team/linux/pivontig/20241010190218.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190218.png)
 
-![](/images/red_team/linux/pivontig/20241010190232.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190232.png)
 
-![](/images/red_team/linux/pivontig/20241010190407.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190407.png)
 
-![](/images/red_team/linux/pivontig/20241010190504.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190504.png)
 
-![](/images/red_team/linux/pivontig/20241010190552.png)
-![](/images/red_team/linux/pivontig/20241010190641.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190552.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190641.png)
 
-![](/images/red_team/linux/pivontig/20241010190709.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190709.png)
 
-![](/images/red_team/linux/pivontig/20241010190734.png)
-![](/images/red_team/linux/pivontig/20241010190805.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190734.png)
+![imagen error](/images/red_team/linux/pivontig/20241010190805.png)
 
 NMAP XARGS:
 [PROXYCHAINS NMAP XARGS](https://www.youtube.com/watch?v=sjUgh__Utvs&t=6999s&ab_channel=S4viSinFiltro)
 
-![](/images/red_team/linux/pivontig/20241015125229.png)
+![imagen error](/images/red_team/linux/pivontig/20241015125229.png)
 
-![](/images/red_team/linux/pivontig/image_0.png)
+![imagen error](/images/red_team/linux/pivontig/image_0.png)

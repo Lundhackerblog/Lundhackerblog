@@ -9,4 +9,4 @@ sidebar:
 
 [Active Directory Enumeration: BloodHound - Hacking Articles](https://www.hackingarticles.in/active-directory-enumeration-bloodhound/)
 
-![](/images/red_team/windows/20241014202017.png)
+![imagen error](/images/red_team/windows/20241014202017.png)

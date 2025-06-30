@@ -32,6 +32,6 @@ PARTE 3 :
 
 [WADComs](https://wadcoms.github.io/)
 
-![](/images/red_team/windows/20241012181048.png)
+![imagen error](/images/red_team/windows/20241012181048.png)
 
-![](/images/red_team/windows/20241012181120.png)
+![imagen error](/images/red_team/windows/20241012181120.png)

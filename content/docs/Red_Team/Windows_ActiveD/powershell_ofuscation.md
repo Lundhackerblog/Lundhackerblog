@@ -26,7 +26,7 @@ GUIA INSTALACION Y USO :[Invoke-Obfuscation — Hiding Payloads To Avoid Detecti
 [GITHUB]([GitHub - danielbohannon/Invoke-Obfuscation: PowerShell Obfuscator](https://github.com/danielbohannon/Invoke-Obfuscation))
 INSTALACION : DESCARGAR REPOSITORIO DE GITHUB
 
-![](/images/red_team/windows/20241005015549.png)
+![imagen error](/images/red_team/windows/20241005015549.png)
 
 ## ANALIZADOR DE OFUSCATION - GITHUB
 
