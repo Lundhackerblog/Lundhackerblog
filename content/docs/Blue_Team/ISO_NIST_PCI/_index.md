@@ -29,4 +29,3 @@ sidebar:
 - Plantillas SOC2: **plantillas** de políticas y procedimientos de código abierto adecuadas para satisfacer una auditoría **SOC2**
 
 ![imagen error](/images/blue_team/iso_nist_pci/20230901094144.png)
-
