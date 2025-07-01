@@ -8,6 +8,17 @@ sidebar:
   open: false
 ---
 
+## TOOLS:-
+
+- GENERAL(WINDOWS AND LINUX)
+  - rabin2 [PicoCTF 2024 Reverse Writeup](https://hackmd.io/@tahaafarooq/picoctf-2024-reverse-engineering)
+
+- WINDOWS
+  - INMUNITY DEBUGER [Basic Reverse Engineering with Immunity Debugger](https://class.malware.re/stuff/nardella/basic-reverse-engineering-immunity-debugger-36982.pdf)
+
+- LINUX
+  - GDB - GEF[Testing - GEF - GDB Enhanced Features documentation](https://hugsy.github.io/gef/testing/)
+
 POR EL MOMENTO SOLO TENGO CONTENPALDO ESTOS 4 TIPOS
 
 RESUMEN
