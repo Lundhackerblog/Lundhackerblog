@@ -11,7 +11,7 @@ sidebar:
 ## EL PDF ESTA EN LA MISMA CARPETA
 
 {{< cards >}}
-  {{< card link="</images/otros/forence/20250125161630.png>" title="PDF ESPAÑOL FORENSING" image="/images/otros/forence/20250125161630.png" subtitle="PDF COMPLETO SOBRE FORENCE EN LINUX" >}}
+  {{< card link="</images/otros/forence/magachaves.pdf>" title="PDF ESPAÑOL FORENSING" image="/images/otros/forence/20250125161630.png" subtitle="PDF COMPLETO SOBRE FORENCE EN LINUX" >}}
 {{< /cards >}}
 
 ## !!!! EL PDF LO ES TODO Y ESTA EN ESPAÑOL
