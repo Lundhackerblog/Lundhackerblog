@@ -20,6 +20,7 @@ PCI SSC.X
 
 > [!info]- Q.2
 ¿Qué significa la sigla "PCI DSS"?
+>
 > - Protocolo de Comunicación Internacional para Datos Seguros
 > - Estándar de Seguridad de Datos para la Industria de Tarjetas de Pago.x
 > - Control de Datos Personales y Seguridad Financiera
@@ -232,7 +233,6 @@ Reducir la exposición de la tarjeta.x
 Sensibilizar a los empleados sobre las amenazas de seguridad.x
 
 {{% /details %}}
-
 
 ## PARTE 2
 

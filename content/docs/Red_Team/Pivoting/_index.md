@@ -67,8 +67,6 @@ EXAMNE DE SIMULACION !!! 6 HORAS !!!
 TOOLS:
 
 PRIVOTING CONCEPTOS:
-![imagen error](/images/red_team/linux/pivontig/20241023135125.png)
-
 ![imagen error](/images/red_team/linux/pivontig/20241010190059.png)
 
 ![imagen error](/images/red_team/linux/pivontig/20241010190139.png)
