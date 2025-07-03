@@ -18,7 +18,6 @@ SAVITAR BLOG ANTIGUO : [Hackear Redes WPA/WPA2 - mundohackers](https://web.archi
 **ARTICULO DE INTERES SOBRE HACNIKG WIFI**
 [Ataques a WPA2 con Pyrit](https://openaccess.uoc.edu/bitstream/10609/73067/7/danielmartTFG0118memoria.pdf)
 
-
 {{< cards >}}
   {{< card link="/images/red_team/crack_password/danielmartTFG0118memoria.pdf" title="PYRIT TESIS" image="/images/red_team/crack_password/image.png" subtitle="PDF COMPLETO SOBRE PYRIT" >}}
 {{< /cards >}}
@@ -212,13 +211,7 @@ FALTA EJEMPLO USANDO TODAS ESTA HERRAMIENTAS
 
 ## EXTRA
 
-- ejemplos reales de uso de `tshark`, `tcpdump` y  **Wireshark** para wifi.
-
----
-
-### 🦈 **1. tshark – versión de Wireshark para terminal**
-
-#### 📌 Comandos útiles de `tshark`
+### 📌 Comandos útiles de `tshark`
 
 | Comando                                                         | ¿Para qué sirve?                                    |
 | --------------------------------------------------------------- | --------------------------------------------------- |
@@ -230,42 +223,5 @@ FALTA EJEMPLO USANDO TODAS ESTA HERRAMIENTAS
 | `sudo tshark -Y "http.request"`                                 | Aplica filtro de visualización (como Wireshark GUI) |
 | `sudo tshark -T fields -e ip.src -e ip.dst -e _ws.col.Protocol` | Muestra solo campos específicos                     |
 | `sudo tshark -c 100 -i eth0`                                    | Captura solo 100 paquetes                           |
-
----
-
-### 🐚 **2. tcpdump – herramienta de captura por línea de comandos**
-
-#### 📌 Comandos útiles de `tcpdump`
-
-| Comando                               | ¿Para qué sirve?                           |
-| ------------------------------------- | ------------------------------------------ |
-| `sudo tcpdump -D`                     | Lista interfaces                           |
-| `sudo tcpdump -i wlan0`               | Captura tráfico de la interfaz `wlan0`     |
-| `sudo tcpdump -i eth0 -w salida.pcap` | Guarda paquetes en un archivo `.pcap`      |
-| `sudo tcpdump -r archivo.pcap`        | Analiza un archivo `.pcap`                 |
-| `sudo tcpdump host 192.168.1.100`     | Filtra por IP (origen o destino)           |
-| `sudo tcpdump port 443`               | Solo tráfico HTTPS                         |
-| `sudo tcpdump tcp`                    | Solo paquetes TCP                          |
-| `sudo tcpdump -nnvvXSs 1514 -i eth0`  | Salida detallada y con payload hexadecimal |
-| `sudo tcpdump -c 50 -i wlan0`         | Captura 50 paquetes y se detiene           |
-
-> `tcpdump` es excelente para scripting, respuesta rápida y servidores sin GUI.
-
----
-
-### 🧪 **3. Wireshark (GUI) – resumen de opciones**
-
-#### 🧷 Funciones principales
-
-| Opción                                           | Descripción                                                                           |
-| ------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| **Captura en vivo**                              | Puedes seleccionar la interfaz (ej: `eth0`, `wlan0`) y ver el tráfico en tiempo real. |
-| **Filtros de captura** (`Capture Filters`)       | Filtran qué paquetes se capturan. Ejemplo: `port 80`, `host 192.168.1.1`.             |
-| **Filtros de visualización** (`Display Filters`) | Filtran lo que ves. Ejemplo: `http.request`, `ip.addr == 10.0.0.5`. Muy potentes.     |
-| **Análisis por protocolo**                       | Ver decodificado en capas: Ethernet, IP, TCP/UDP, HTTP, TLS, etc.                     |
-| **Seguimiento de flujo (Follow Stream)**         | Visualiza una conversación completa (ej: HTTP o TCP).                                 |
-| **Estadísticas**                                 | Ver tráfico por protocolo, hosts, duración, puertos, etc.                             |
-| **Coloración de tráfico**                        | Resalta tipos de paquetes automáticamente (SYN, HTTP, errores, etc).                  |
-| **Guardar/exportar**                             | Guarda capturas como `.pcap`, exporta paquetes seleccionados, etc.                    |
 
 ---
