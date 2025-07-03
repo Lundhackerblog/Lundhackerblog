@@ -18,7 +18,6 @@ SAVITAR BLOG ANTIGUO : [Hackear Redes WPA/WPA2 - mundohackers](https://web.archi
 **ARTICULO DE INTERES SOBRE HACNIKG WIFI**
 [Ataques a WPA2 con Pyrit](https://openaccess.uoc.edu/bitstream/10609/73067/7/danielmartTFG0118memoria.pdf)
 
-![imagen error](/images/red_team/crack_password/danielmartTFG0118memoria.pdf)
 
 {{< cards >}}
   {{< card link="/images/red_team/crack_password/danielmartTFG0118memoria.pdf" title="PYRIT TESIS" image="/images/red_team/crack_password/image.png" subtitle="PDF COMPLETO SOBRE PYRIT" >}}
