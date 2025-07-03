@@ -1,5 +1,5 @@
 ---
-title: nginx
+title: NGINX
 type: docs
 prev: docs/first-page
 next: docs/Devops/leaf
