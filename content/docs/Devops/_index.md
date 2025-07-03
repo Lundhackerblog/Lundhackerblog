@@ -8,4 +8,7 @@ sidebar:
   open: false
 ---
 
-Esta es la página principal de la carpeta Devops.
+{{< cards >}}
+  {{< card link="docs/savinotes" title="CLOUDFLARE" icon="document-text" >}}
+  {{< card link="docs/red_team" title="NGINX" icon="shield-check" >}}
+{{< /cards >}}
