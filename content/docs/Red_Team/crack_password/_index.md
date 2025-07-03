@@ -1,5 +1,5 @@
 ---
-title: Criptografia (Cryptography)
+title: Crack password
 type: docs
 prev: docs/first-page
 weight: 8
