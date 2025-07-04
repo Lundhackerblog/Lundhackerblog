@@ -9,9 +9,9 @@ sidebar:
 ---
 
 {{< cards >}}
-  {{< card link="docs/devops/cloudflare/" title="CLOUDFLARE" icon="document-text" >}}
-  {{< card link="docs/devops/nginx/" title="NGINX" icon="shield-check" >}}
+  {{< card link="docs/devops/cloudflare/" title="CLOUDFLARE" icon="cloudflare" >}}
+  {{< card link="docs/devops/nginx/" title="NGINX" icon="nginx" >}}
   {{< card link="docs/devops/iptables/" title="IPTABLES" icon="book-open" >}}
-  {{< card link="docs/devops/docker/" title="DOCKER" icon="chip" >}}
+  {{< card link="docs/devops/docker/" title="DOCKER" icon="docker" >}}
 
 {{< /cards >}}
