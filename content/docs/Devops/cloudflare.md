@@ -1,5 +1,5 @@
 ---
-title: {{< icon "cloudflare" >}} CLOUDFLARE
+title: CLOUDFLARE
 type: docs
 prev: docs/first-page
 next: docs/Devops/leaf
