@@ -9,6 +9,6 @@ sidebar:
 ---
 
 {{< cards >}}
-  {{< card link="docs/red_team/laboratorios/htb/" title="Hack The box" icon="document-text" >}}
-  {{< card link="docs/red_team/laboratorios/thm/" title="Try Hack Me" icon="shield-check" >}}
+  {{< card link="htb/" title="Hack The box" icon="htb" >}}
+  {{< card link="thm/" title="Try Hack Me" icon="thm" >}}
 {{< /cards >}}
