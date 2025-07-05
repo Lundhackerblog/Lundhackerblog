@@ -8,4 +8,12 @@ sidebar:
   open: false
 ---
 
-Esta es la página principal de la carpeta Blue Team.
+{{< cards >}}
+  {{< card link="docs/red_team" title="WAZUH SIEM" icon="shield-check" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="docs/savinotes" title="ISO 27000" icon="document-text" >}}
+  {{< card link="docs/red_team" title="NIST CSF V2" icon="shield-check" >}}
+  {{< card link="docs/red_team" title="PCI DSS" icon="shield-check" >}}
+{{< /cards >}}
