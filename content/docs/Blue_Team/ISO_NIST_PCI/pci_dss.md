@@ -11,10 +11,10 @@ prev: docs/Blue_Team/
 >
 > - IEEE
 > - ISO
-> - PCI SSC.x
+> - PCI SSC
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-PCI SSC.X
+PCI SSC
 
 {{% /details %}}
 
@@ -22,11 +22,11 @@ PCI SSC.X
 ¿Qué significa la sigla "PCI DSS"?
 >
 > - Protocolo de Comunicación Internacional para Datos Seguros
-> - Estándar de Seguridad de Datos para la Industria de Tarjetas de Pago.x
+> - Estándar de Seguridad de Datos para la Industria de Tarjetas de Pago
 > - Control de Datos Personales y Seguridad Financiera
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Estándar de Seguridad de Datos para la Industria de Tarjetas de Pago.x
+Estándar de Seguridad de Datos para la Industria de Tarjetas de Pago
 
 {{% /details %}}
 
@@ -35,10 +35,10 @@ Estándar de Seguridad de Datos para la Industria de Tarjetas de Pago.x
 >
 > - 4
 > - 6
-> - 12.x
+> - 12
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-12.x
+12
 
 {{% /details %}}
 
@@ -47,10 +47,10 @@ Estándar de Seguridad de Datos para la Industria de Tarjetas de Pago.x
 >
 > - Información de salud  
 > - Información financiera personal  
-> - Datos de tarjetas de pago.x  
+> - Datos de tarjetas de pago  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Datos de tarjetas de pago.x
+Datos de tarjetas de pago
 
 {{% /details %}}
 
@@ -59,10 +59,10 @@ Datos de tarjetas de pago.x
 >
 > - Proteger la privacidad del correo electrónico  
 > - Asegurar la integridad de los datos de la red  
-> - Reducir el riesgo de pérdida de datos de tarjetas de pago.x  
+> - Reducir el riesgo de pérdida de datos de tarjetas de pago  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Reducir el riesgo de pérdida de datos de tarjetas de pago.x
+Reducir el riesgo de pérdida de datos de tarjetas de pago
 
 {{% /details %}}
 
@@ -71,10 +71,10 @@ Reducir el riesgo de pérdida de datos de tarjetas de pago.x
 >
 > - Longitud mínima de 6 caracteres  
 > - Uso de mayúsculas y minúsculas  
-> - Cambio de contraseñas predeterminadas.x  
+> - Cambio de contraseñas predeterminadas  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Cambio de contraseñas predeterminadas.x
+Cambio de contraseñas predeterminadas
 
 {{% /details %}}
 
@@ -83,10 +83,10 @@ Cambio de contraseñas predeterminadas.x
 >
 > - Número de Autorización Personal  
 > - Número de Cuenta de Pago  
-> - Número de Cuenta Principal.x  
+> - Número de Cuenta Principal  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Número de Cuenta Principal.x
+Número de Cuenta Principal
 
 {{% /details %}}
 
@@ -94,11 +94,11 @@ Número de Cuenta Principal.x
 ¿Cuál es la finalidad de la encriptación según PCI DSS?
 >
 > - Facilitar el acceso rápido a los datos  
-> - Proteger la confidencialidad de los datos sensibles.x  
+> - Proteger la confidencialidad de los datos sensibles  
 > - Mejorar la velocidad de la red  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Proteger la confidencialidad de los datos sensibles.x
+Proteger la confidencialidad de los datos sensibles
 
 {{% /details %}}
 
@@ -107,10 +107,10 @@ Proteger la confidencialidad de los datos sensibles.x
 >
 > - Auditorías anuales  
 > - Evaluaciones trimestrales  
-> - Monitoreo y corrección continua.x  
+> - Monitoreo y corrección continua  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Monitoreo y corrección continua.x
+Monitoreo y corrección continua
 
 {{% /details %}}
 
@@ -119,10 +119,10 @@ Monitoreo y corrección continua.x
 >
 > - Optimizar el rendimiento de la red  
 > - Reducir el costo de mantenimiento de la red  
-> - Limitar la exposición de datos sensibles.x  
+> - Limitar la exposición de datos sensibles  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Limitar la exposición de datos sensibles.x
+Limitar la exposición de datos sensibles
 
 {{% /details %}}
 
@@ -130,11 +130,11 @@ Limitar la exposición de datos sensibles.x
 ¿Cuál es el requisito relacionado con la autenticación de usuarios en PCI DSS?
 >
 > - Uso de firewalls  
-> - Implementación de controles de acceso.x  
+> - Implementación de controles de acceso  
 > - Uso de certificados SSL  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Implementación de controles de acceso.x
+Implementación de controles de acceso
 
 {{% /details %}}
 
@@ -142,23 +142,23 @@ Implementación de controles de acceso.x
 ¿Qué significa el término "skimming" en el contexto de PCI DSS?
 >
 > - Técnica de encriptación avanzada  
-> - Copia no autorizada de datos de tarjetas.x  
+> - Copia no autorizada de datos de tarjetas  
 > - Método de autenticación biométrica  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Copia no autorizada de datos de tarjetas.x
+Copia no autorizada de datos de tarjetas
 
 {{% /details %}}
 
 > [!info]- Q.13
 ¿Cuál es el propósito de realizar pruebas de seguridad según PCI DSS?
 >
-> - Identificar vulnerabilidades en la red.x  
+> - Identificar vulnerabilidades en la red  
 > - Aumentar la velocidad de la red  
 > - Validar la autenticidad de las transacciones  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Identificar vulnerabilidades en la red.x
+Identificar vulnerabilidades en la red
 
 {{% /details %}}
 
@@ -166,11 +166,11 @@ Identificar vulnerabilidades en la red.x
 ¿Qué tipo de información debe ser protegida según PCI DSS, además del PAN?
 >
 > - Fecha de nacimiento  
-> - Nombre del titular de la tarjeta.x  
+> - Nombre del titular de la tarjeta  
 > - Código de seguridad de la tarjeta  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Nombre del titular de la tarjeta.x
+Nombre del titular de la tarjeta
 
 {{% /details %}}
 
@@ -179,10 +179,10 @@ Nombre del titular de la tarjeta.x
 >
 > - Cumplir con regulaciones de impuestos  
 > - Facilitar la solución de disputas  
-> - Proporcionar evidencia de cumplimiento.x  
+> - Proporcionar evidencia de cumplimiento  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Proporcionar evidencia de cumplimiento.x
+Proporcionar evidencia de cumplimiento
 
 {{% /details %}}
 
@@ -190,11 +190,11 @@ Proporcionar evidencia de cumplimiento.x
 ¿Cuál es el propósito de la política de seguridad de la información según PCI DSS?
 >
 > - Definir sanciones para empleados  
-> - Establecer directrices para proteger la información.x  
+> - Establecer directrices para proteger la información  
 > - Determinar las tarifas de transacción  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Establecer directrices para proteger la información.x
+Establecer directrices para proteger la información
 
 {{% /details %}}
 
@@ -202,11 +202,11 @@ Establecer directrices para proteger la información.x
 ¿Cuál es el objetivo del requisito de monitoreo de seguridad según PCI DSS?
 >
 > - Identificar cambios en el mercado  
-> - Detectar y responder a amenazas de seguridad.x  
+> - Detectar y responder a amenazas de seguridad  
 > - Mejorar la velocidad de procesamiento de datos  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Detectar y responder a amenazas de seguridad.x
+Detectar y responder a amenazas de seguridad
 
 {{% /details %}}
 
@@ -214,11 +214,11 @@ Detectar y responder a amenazas de seguridad.x
 ¿Qué significa el término "compensación" en el contexto de PCI DSS?
 >
 > - Reemplazar hardware obsoleto  
-> - Reducir la exposición de la tarjeta.x  
+> - Reducir la exposición de la tarjeta  
 > - Incrementar la velocidad de la red  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Reducir la exposición de la tarjeta.x
+Reducir la exposición de la tarjeta
 
 {{% /details %}}
 
@@ -226,11 +226,11 @@ Reducir la exposición de la tarjeta.x
 ¿Cuál es el propósito de la capacitación de concienciación sobre seguridad según PCI DSS?
 >
 > - Mejorar la productividad del personal  
-> - Sensibilizar a los empleados sobre las amenazas de seguridad.x  
+> - Sensibilizar a los empleados sobre las amenazas de seguridad  
 > - Reducir los costos operativos  
 {{% details title="RESPUESTA ES" closed="true" %}}
 
-Sensibilizar a los empleados sobre las amenazas de seguridad.x
+Sensibilizar a los empleados sobre las amenazas de seguridad
 
 {{% /details %}}
 
