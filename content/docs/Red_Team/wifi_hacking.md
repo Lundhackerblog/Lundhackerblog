@@ -1,5 +1,5 @@
 ---
-title: Wifi hacking
+title: 🛜Wifi hacking
 type: docs
 prev: docs/first-page
 weight: 8

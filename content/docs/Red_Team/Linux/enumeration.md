@@ -1,5 +1,5 @@
 ---
-title: Enumeracion Server Linux
+title: Enumeracion Linux
 type: docs
 prev: docs/first-page
 next: docs/Red_Team/leaf
