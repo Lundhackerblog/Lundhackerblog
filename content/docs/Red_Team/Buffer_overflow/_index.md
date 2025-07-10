@@ -10,14 +10,27 @@ sidebar:
 
 ## TOOLS:-
 
-- GENERAL(WINDOWS AND LINUX)
-  - rabin2 [PicoCTF 2024 Reverse Writeup](https://hackmd.io/@tahaafarooq/picoctf-2024-reverse-engineering)
+### GENERAL(WINDOWS Y LINUX)
 
-- WINDOWS
-  - INMUNITY DEBUGER [Basic Reverse Engineering with Immunity Debugger](https://class.malware.re/stuff/nardella/basic-reverse-engineering-immunity-debugger-36982.pdf)
+{{< cards >}}
+  {{< card link="rabin2" title="rabin2" icon="document-text" >}}
+  {{< card link="ghidra" title="Ghidra" icon="document-text" >}}
+{{< /cards >}}
 
-- LINUX
-  - GDB - GEF[Testing - GEF - GDB Enhanced Features documentation](https://hugsy.github.io/gef/testing/)
+### WINDOWS
+
+{{< cards >}}
+  {{< card link="immunity_debugger" title="Immunity Debugger" icon="document-text" >}}
+{{< /cards >}}
+
+### LINUX
+
+{{< cards >}}
+  {{< card link="gdb" title="GDB" icon="document-text" >}}
+  {{< card link="radare2" title="Radare2" icon="document-text" >}}
+{{< /cards >}}
+
+## TÉCNICAS DE EXPLOTACIÓN DE BUFFER OVERFLOW
 
 POR EL MOMENTO SOLO TENGO CONTENPALDO ESTOS 4 TIPOS
 

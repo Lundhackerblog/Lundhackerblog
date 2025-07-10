@@ -13,3 +13,7 @@ sidebar:
 ### WEBS
 
 - [ICONS SVG FREE](https://icon-sets.iconify.design/)
+
+### N8N
+
+- <https://youtu.be/p3gz4pFxL4U?si=vYmM_wtkCJm9VbUg>
