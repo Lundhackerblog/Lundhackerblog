@@ -3,7 +3,7 @@ title: Buffer OverFlow
 type: docs
 prev: docs/first-page
 next: docs/Red_Team/leaf
-weight: 4
+weight: 7
 sidebar:
   open: false
 ---

@@ -1,9 +1,9 @@
 ---
-title: Linux
+title: 🐧Linux
 type: docs
 prev: docs/first-page
 next: docs/Red_Team/leaf
-weight: 4
+weight: 1
 sidebar:
   open: false
 ---
